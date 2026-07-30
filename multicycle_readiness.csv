@@ -1,0 +1,26 @@
+severity,category,item,finding,recommendation
+ERROR,raw_data,gfs,No run-scoped raw directory was recorded for gfs: data/gfs/20260728_00z,Move or copy this model's raw files into a run-specific directory before executing another cycle.
+PASS,raw_data,gefs,Run-scoped raw directory exists: data/gefs/20260728_00z,None.
+PASS,raw_data,gdps,Run-scoped raw directory exists: data/gdps/20260728_00z,None.
+PASS,raw_data,geps,Run-scoped raw directory exists: data/geps/20260728_00z,None.
+PASS,raw_data,icon,Run-scoped raw directory exists: data/icon/20260728_00z,None.
+PASS,raw_data,ecmwf_ens,Run-scoped raw directory exists: data/ecmwf_ens/20260728_00z,None.
+PASS,raw_data,aifs_ens,Run-scoped raw directory exists: data/aifs_ens/20260728_00z,None.
+ERROR,output_scoping,output/gfs_global_6hourly.csv,Forecast output is not run-scoped and can be overwritten by the next cycle.,Rename or copy it so the filename contains 20260728_00z.
+ERROR,output_scoping,output/gfs_global_daily.csv,Forecast output is not run-scoped and can be overwritten by the next cycle.,Rename or copy it so the filename contains 20260728_00z.
+ERROR,output_scoping,output/gfs_global_daily_complete.csv,Forecast output is not run-scoped and can be overwritten by the next cycle.,Rename or copy it so the filename contains 20260728_00z.
+ERROR,script_interface,download_gfs.py,"Missing run parameters: --date, --cycle, --max-hour",Parameterize the script before adding it to the automated orchestrator.
+ERROR,script_interface,calculate_gfs_global.py,"Missing run parameters: --date, --cycle",Parameterize the script before adding it to the automated orchestrator.
+PASS,script_interface,download_gefs.py,Required run parameters were found.,None.
+PASS,script_interface,calculate_gefs_global.py,Required run parameters were found.,None.
+PASS,script_interface,download_gdps.py,Required run parameters were found.,None.
+PASS,script_interface,calculate_gdps_global.py,Required run parameters were found.,None.
+PASS,script_interface,download_geps.py,Required run parameters were found.,None.
+PASS,script_interface,calculate_geps_global.py,Required run parameters were found.,None.
+PASS,script_interface,download_ecmwf_ens.py,Required run parameters were found.,None.
+PASS,script_interface,calculate_ecmwf_ens_global.py,Required run parameters were found.,None.
+PASS,script_interface,download_aifs_ens.py,Required run parameters were found.,None.
+PASS,script_interface,calculate_aifs_ens_global.py,Required run parameters were found.,None.
+ERROR,script_interface,build_multimodel_consensus.py,"Missing run parameters: --date, --cycle",Parameterize the script before adding it to the automated orchestrator.
+WARN,hardcoded_date,build_multimodel_consensus.py,Date literals found: 20260728,"Confirm these are defaults or examples, not active hardcoded run dates."
+PASS,git,repository,Working tree is clean.,None.

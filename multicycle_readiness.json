@@ -1,0 +1,177 @@
+[
+  {
+    "severity": "ERROR",
+    "category": "raw_data",
+    "item": "gfs",
+    "finding": "No run-scoped raw directory was recorded for gfs: data/gfs/20260728_00z",
+    "recommendation": "Move or copy this model's raw files into a run-specific directory before executing another cycle."
+  },
+  {
+    "severity": "PASS",
+    "category": "raw_data",
+    "item": "gefs",
+    "finding": "Run-scoped raw directory exists: data/gefs/20260728_00z",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "raw_data",
+    "item": "gdps",
+    "finding": "Run-scoped raw directory exists: data/gdps/20260728_00z",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "raw_data",
+    "item": "geps",
+    "finding": "Run-scoped raw directory exists: data/geps/20260728_00z",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "raw_data",
+    "item": "icon",
+    "finding": "Run-scoped raw directory exists: data/icon/20260728_00z",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "raw_data",
+    "item": "ecmwf_ens",
+    "finding": "Run-scoped raw directory exists: data/ecmwf_ens/20260728_00z",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "raw_data",
+    "item": "aifs_ens",
+    "finding": "Run-scoped raw directory exists: data/aifs_ens/20260728_00z",
+    "recommendation": "None."
+  },
+  {
+    "severity": "ERROR",
+    "category": "output_scoping",
+    "item": "output/gfs_global_6hourly.csv",
+    "finding": "Forecast output is not run-scoped and can be overwritten by the next cycle.",
+    "recommendation": "Rename or copy it so the filename contains 20260728_00z."
+  },
+  {
+    "severity": "ERROR",
+    "category": "output_scoping",
+    "item": "output/gfs_global_daily.csv",
+    "finding": "Forecast output is not run-scoped and can be overwritten by the next cycle.",
+    "recommendation": "Rename or copy it so the filename contains 20260728_00z."
+  },
+  {
+    "severity": "ERROR",
+    "category": "output_scoping",
+    "item": "output/gfs_global_daily_complete.csv",
+    "finding": "Forecast output is not run-scoped and can be overwritten by the next cycle.",
+    "recommendation": "Rename or copy it so the filename contains 20260728_00z."
+  },
+  {
+    "severity": "ERROR",
+    "category": "script_interface",
+    "item": "download_gfs.py",
+    "finding": "Missing run parameters: --date, --cycle, --max-hour",
+    "recommendation": "Parameterize the script before adding it to the automated orchestrator."
+  },
+  {
+    "severity": "ERROR",
+    "category": "script_interface",
+    "item": "calculate_gfs_global.py",
+    "finding": "Missing run parameters: --date, --cycle",
+    "recommendation": "Parameterize the script before adding it to the automated orchestrator."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "download_gefs.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "calculate_gefs_global.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "download_gdps.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "calculate_gdps_global.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "download_geps.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "calculate_geps_global.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "download_ecmwf_ens.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "calculate_ecmwf_ens_global.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "download_aifs_ens.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "PASS",
+    "category": "script_interface",
+    "item": "calculate_aifs_ens_global.py",
+    "finding": "Required run parameters were found.",
+    "recommendation": "None."
+  },
+  {
+    "severity": "ERROR",
+    "category": "script_interface",
+    "item": "build_multimodel_consensus.py",
+    "finding": "Missing run parameters: --date, --cycle",
+    "recommendation": "Parameterize the script before adding it to the automated orchestrator."
+  },
+  {
+    "severity": "WARN",
+    "category": "hardcoded_date",
+    "item": "build_multimodel_consensus.py",
+    "finding": "Date literals found: 20260728",
+    "recommendation": "Confirm these are defaults or examples, not active hardcoded run dates."
+  },
+  {
+    "severity": "PASS",
+    "category": "git",
+    "item": "repository",
+    "finding": "Working tree is clean.",
+    "recommendation": "None."
+  }
+]
