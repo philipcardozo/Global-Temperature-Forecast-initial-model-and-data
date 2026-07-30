@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "global-temperature-forecast"
+version = "0.1.0"
+description = "Multi-model whole-Earth temperature forecast and verification system"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+authors = [
+    { name = "Philip Cardozo" }
+]
+dependencies = [
+    "cdsapi==0.7.7",
+    "cfgrib==0.9.15.1",
+    "eccodes==2.47.0",
+    "eccodeslib>=2.47,<3",
+    "ecmwf-datastores-client==0.5.1",
+    "ecmwf-opendata==0.3.31",
+    "numpy==2.5.1",
+    "pandas==3.0.5",
+    "requests==2.34.2",
+    "xarray==2026.7.0",
+]
+
+[project.scripts]
+gtf = "gtf.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15,<2",
+    "pytest>=8,<9",
+    "ruff>=0.12,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gtf"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "B",
+    "E",
+    "F",
+    "I",
+    "UP",
+]
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+packages = ["gtf"]
+mypy_path = "src"

@@ -1,0 +1,161 @@
+PHASE 1 ENVIRONMENT INVENTORY
+================================================================================
+
+Created UTC: 2026-07-30T15:49:53.758250+00:00
+Git branch:  phase-1/reproducible-package
+Git commit:  f0566cda7b02f79073a3688e76c33a712268eb2f
+
+PYTHON
+--------------------------------------------------------------------------------
+Executable: /Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python3
+Version:    3.13.9 (v3.13.9:8183fa5e3f7, Oct 14 2025, 10:27:13) [Clang 16.0.0 (clang-1600.0.26.6)]
+Platform:   macOS-26.5.2-arm64-arm-64bit-Mach-O
+
+TRACKED PYTHON FILES
+--------------------------------------------------------------------------------
+Count: 32
+  audit_multicycle_readiness.py
+  build_multimodel_consensus.py
+  build_run_catalog.py
+  calculate_aifs_ens_global.py
+  calculate_ecmwf_ens_global.py
+  calculate_era5t_global.py
+  calculate_gdps_global.py
+  calculate_gefs_global.py
+  calculate_geps_global.py
+  calculate_gfs_global.py
+  calculate_icon_global.py
+  compare_all_global_models.py
+  compare_ensemble_systems.py
+  compare_global_models.py
+  compare_three_ensemble_systems.py
+  download_aifs_ens.py
+  download_ecmwf_ens.py
+  download_era5t.py
+  download_gdps.py
+  download_gefs.py
+  download_geps.py
+  download_gfs.py
+  download_icon.py
+  snapshot_run.py
+  verification_status.py
+  verify_aifs_ens.py
+  verify_ecmwf_ens.py
+  verify_forecasts.py
+  verify_gdps.py
+  verify_geps.py
+  verify_icon.py
+  verify_multimodel_consensus.py
+
+THIRD-PARTY IMPORTS
+--------------------------------------------------------------------------------
+  cdsapi: cdsapi==0.7.7
+      download_era5t.py:9
+  cfgrib: cfgrib==0.9.15.1
+      calculate_gdps_global.py:7
+      calculate_gefs_global.py:7
+      calculate_gfs_global.py:8
+  eccodes: eccodes==2.47.0
+      calculate_aifs_ens_global.py:11
+      calculate_ecmwf_ens_global.py:11
+      calculate_geps_global.py:11
+  ecmwf: ecmwf-opendata==0.3.31, ecmwf-datastores-client==0.5.1
+      download_aifs_ens.py:10
+      download_ecmwf_ens.py:10
+  numpy: numpy==2.5.1
+      build_multimodel_consensus.py:7
+      calculate_aifs_ens_global.py:9
+      calculate_ecmwf_ens_global.py:9
+      calculate_era5t_global.py:5
+      calculate_gdps_global.py:8
+      calculate_gefs_global.py:8
+      calculate_geps_global.py:9
+      calculate_gfs_global.py:9
+      calculate_icon_global.py:7
+      compare_ensemble_systems.py:5
+      compare_three_ensemble_systems.py:5
+  pandas: pandas==3.0.5
+      build_multimodel_consensus.py:8
+      build_run_catalog.py:8
+      calculate_aifs_ens_global.py:10
+      calculate_ecmwf_ens_global.py:10
+      calculate_era5t_global.py:6
+      calculate_gdps_global.py:9
+      calculate_gefs_global.py:9
+      calculate_geps_global.py:10
+      calculate_gfs_global.py:10
+      calculate_icon_global.py:8
+      compare_all_global_models.py:5
+      compare_ensemble_systems.py:6
+      compare_global_models.py:5
+      compare_three_ensemble_systems.py:6
+      snapshot_run.py:16
+      verification_status.py:5
+      verify_aifs_ens.py:6
+      verify_ecmwf_ens.py:6
+      verify_forecasts.py:6
+      verify_gdps.py:5
+      verify_geps.py:6
+      verify_icon.py:6
+      verify_multimodel_consensus.py:6
+  requests: requests==2.34.2
+      download_gdps.py:10
+      download_gefs.py:11
+      download_geps.py:10
+      download_gfs.py:8
+      download_icon.py:10
+  xarray: xarray==2026.7.0
+      calculate_era5t_global.py:7
+      calculate_gdps_global.py:10
+      calculate_gefs_global.py:10
+      calculate_gfs_global.py:11
+      calculate_icon_global.py:9
+
+REQUIRED EXECUTABLES
+--------------------------------------------------------------------------------
+  python: FOUND /Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python
+      Python 3.13.9
+  python3: FOUND /Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python3
+      Python 3.13.9
+  pip: FOUND /Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/pip
+      pip 26.1.2 from /Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/lib/python3.13/site-packages/pip (python 3.13)
+  git: FOUND /usr/bin/git
+      git version 2.50.1 (Apple Git-155)
+  gcloud: FOUND /opt/homebrew/share/google-cloud-sdk/bin/gcloud
+      Google Cloud SDK 578.0.0
+      bq 2.1.36
+      bundled-python3-unix 3.14.6
+      core 2026.07.24
+      gcloud-crc32c 1.0.0
+      gsutil 5.37
+  gsutil: FOUND /opt/homebrew/share/google-cloud-sdk/bin/gsutil
+      gsutil version: 5.37
+  grib_count: FOUND /opt/homebrew/bin/grib_count
+      -V: No such file or directory
+  grib_ls: FOUND /opt/homebrew/bin/grib_ls
+      ecCodes Version 2.48.0
+  grib_get: FOUND /opt/homebrew/bin/grib_get
+      ecCodes Version 2.48.0
+  grib_get_data: FOUND /opt/homebrew/bin/grib_get_data
+      ecCodes Version 2.48.0
+  cdo: MISSING
+  ncks: MISSING
+  uv: FOUND /Users/felipecardozo/.local/bin/uv
+      uv 0.11.24 (5e04460c0 2026-06-23 aarch64-apple-darwin)
+
+PIP CHECK
+--------------------------------------------------------------------------------
+No broken requirements found.
+
+SYNTAX ERRORS
+--------------------------------------------------------------------------------
+  None detected.
+
+CURRENT ENVIRONMENT PACKAGE COUNT
+--------------------------------------------------------------------------------
+27
+
+OUTPUT FILES
+--------------------------------------------------------------------------------
+  archive/engineering/phase1_environment_inventory.txt
+  archive/engineering/phase1_environment_inventory.json

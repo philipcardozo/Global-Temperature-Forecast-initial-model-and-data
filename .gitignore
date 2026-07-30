@@ -14,3 +14,10 @@ archive/runs/*/code_snapshot/
 .env.gcp.local
 logs/
 .DS_Store
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.uv-cache/
+dist/
+build/
+*.egg-info/

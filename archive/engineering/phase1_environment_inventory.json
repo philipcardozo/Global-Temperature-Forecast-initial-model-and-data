@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-07-30T15:49:53.758250+00:00",
+  "repository": {
+    "branch": "phase-1/reproducible-package",
+    "commit": "f0566cda7b02f79073a3688e76c33a712268eb2f"
+  },
+  "python": {
+    "executable": "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python3",
+    "version": "3.13.9 (v3.13.9:8183fa5e3f7, Oct 14 2025, 10:27:13) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "version_info": {
+      "major": 3,
+      "minor": 13,
+      "micro": 9
+    },
+    "implementation": "CPython"
+  },
+  "platform": {
+    "system": "Darwin",
+    "release": "25.5.0",
+    "machine": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O"
+  },
+  "tracked_python_files": [
+    "audit_multicycle_readiness.py",
+    "build_multimodel_consensus.py",
+    "build_run_catalog.py",
+    "calculate_aifs_ens_global.py",
+    "calculate_ecmwf_ens_global.py",
+    "calculate_era5t_global.py",
+    "calculate_gdps_global.py",
+    "calculate_gefs_global.py",
+    "calculate_geps_global.py",
+    "calculate_gfs_global.py",
+    "calculate_icon_global.py",
+    "compare_all_global_models.py",
+    "compare_ensemble_systems.py",
+    "compare_global_models.py",
+    "compare_three_ensemble_systems.py",
+    "download_aifs_ens.py",
+    "download_ecmwf_ens.py",
+    "download_era5t.py",
+    "download_gdps.py",
+    "download_gefs.py",
+    "download_geps.py",
+    "download_gfs.py",
+    "download_icon.py",
+    "snapshot_run.py",
+    "verification_status.py",
+    "verify_aifs_ens.py",
+    "verify_ecmwf_ens.py",
+    "verify_forecasts.py",
+    "verify_gdps.py",
+    "verify_geps.py",
+    "verify_icon.py",
+    "verify_multimodel_consensus.py"
+  ],
+  "tracked_python_file_count": 32,
+  "all_imports": [
+    "__future__",
+    "argparse",
+    "bz2",
+    "cdsapi",
+    "cfgrib",
+    "collections",
+    "concurrent",
+    "csv",
+    "datetime",
+    "eccodes",
+    "ecmwf",
+    "functools",
+    "hashlib",
+    "importlib",
+    "json",
+    "numpy",
+    "pandas",
+    "pathlib",
+    "platform",
+    "re",
+    "requests",
+    "shutil",
+    "subprocess",
+    "sys",
+    "threading",
+    "time",
+    "typing",
+    "urllib",
+    "xarray",
+    "zipfile"
+  ],
+  "third_party_imports": [
+    "cdsapi",
+    "cfgrib",
+    "eccodes",
+    "ecmwf",
+    "numpy",
+    "pandas",
+    "requests",
+    "xarray"
+  ],
+  "import_locations": {
+    "__future__": [
+      "audit_multicycle_readiness.py:1",
+      "build_multimodel_consensus.py:1",
+      "build_run_catalog.py:1",
+      "calculate_aifs_ens_global.py:1",
+      "calculate_ecmwf_ens_global.py:1",
+      "calculate_era5t_global.py:1",
+      "calculate_gdps_global.py:1",
+      "calculate_gefs_global.py:1",
+      "calculate_geps_global.py:1",
+      "calculate_gfs_global.py:1",
+      "calculate_icon_global.py:1",
+      "compare_all_global_models.py:1",
+      "compare_ensemble_systems.py:1",
+      "compare_global_models.py:1",
+      "compare_three_ensemble_systems.py:1",
+      "download_aifs_ens.py:1",
+      "download_ecmwf_ens.py:1",
+      "download_era5t.py:1",
+      "download_gdps.py:1",
+      "download_gefs.py:1",
+      "download_geps.py:1",
+      "download_gfs.py:1",
+      "download_icon.py:1",
+      "snapshot_run.py:1",
+      "verification_status.py:1",
+      "verify_aifs_ens.py:1",
+      "verify_ecmwf_ens.py:1",
+      "verify_forecasts.py:1",
+      "verify_gdps.py:1",
+      "verify_geps.py:1",
+      "verify_icon.py:1",
+      "verify_multimodel_consensus.py:1"
+    ],
+    "argparse": [
+      "audit_multicycle_readiness.py:3",
+      "build_multimodel_consensus.py:3",
+      "build_run_catalog.py:3",
+      "calculate_aifs_ens_global.py:3",
+      "calculate_ecmwf_ens_global.py:3",
+      "calculate_gdps_global.py:3",
+      "calculate_gefs_global.py:3",
+      "calculate_geps_global.py:3",
+      "calculate_gfs_global.py:3",
+      "calculate_icon_global.py:3",
+      "download_aifs_ens.py:3",
+      "download_ecmwf_ens.py:3",
+      "download_era5t.py:3",
+      "download_gdps.py:3",
+      "download_gefs.py:3",
+      "download_geps.py:3",
+      "download_gfs.py:3",
+      "download_icon.py:3",
+      "snapshot_run.py:3",
+      "verify_aifs_ens.py:3",
+      "verify_ecmwf_ens.py:3",
+      "verify_forecasts.py:3",
+      "verify_geps.py:3",
+      "verify_icon.py:3",
+      "verify_multimodel_consensus.py:3"
+    ],
+    "csv": [
+      "audit_multicycle_readiness.py:4",
+      "snapshot_run.py:4"
+    ],
+    "json": [
+      "audit_multicycle_readiness.py:5",
+      "build_run_catalog.py:4",
+      "snapshot_run.py:7"
+    ],
+    "re": [
+      "audit_multicycle_readiness.py:6",
+      "calculate_aifs_ens_global.py:4",
+      "calculate_ecmwf_ens_global.py:4",
+      "calculate_gdps_global.py:4",
+      "calculate_gefs_global.py:4",
+      "calculate_geps_global.py:4",
+      "calculate_gfs_global.py:4",
+      "calculate_icon_global.py:4",
+      "download_aifs_ens.py:4",
+      "download_ecmwf_ens.py:4",
+      "download_gefs.py:4",
+      "download_geps.py:4",
+      "download_gfs.py:4",
+      "download_icon.py:5"
+    ],
+    "subprocess": [
+      "audit_multicycle_readiness.py:7",
+      "download_aifs_ens.py:5",
+      "download_ecmwf_ens.py:5",
+      "download_era5t.py:4",
+      "download_gdps.py:4",
+      "download_geps.py:5",
+      "download_icon.py:6",
+      "snapshot_run.py:10"
+    ],
+    "sys": [
+      "audit_multicycle_readiness.py:8",
+      "snapshot_run.py:11"
+    ],
+    "pathlib": [
+      "audit_multicycle_readiness.py:9",
+      "build_multimodel_consensus.py:5",
+      "build_run_catalog.py:5",
+      "calculate_aifs_ens_global.py:6",
+      "calculate_ecmwf_ens_global.py:6",
+      "calculate_era5t_global.py:3",
+      "calculate_gdps_global.py:5",
+      "calculate_gefs_global.py:5",
+      "calculate_geps_global.py:6",
+      "calculate_gfs_global.py:6",
+      "calculate_icon_global.py:5",
+      "compare_all_global_models.py:3",
+      "compare_ensemble_systems.py:3",
+      "compare_global_models.py:3",
+      "compare_three_ensemble_systems.py:3",
+      "download_aifs_ens.py:8",
+      "download_ecmwf_ens.py:8",
+      "download_era5t.py:7",
+      "download_gdps.py:7",
+      "download_gefs.py:9",
+      "download_geps.py:8",
+      "download_gfs.py:6",
+      "download_icon.py:8",
+      "snapshot_run.py:13",
+      "verification_status.py:3",
+      "verify_aifs_ens.py:4",
+      "verify_ecmwf_ens.py:4",
+      "verify_forecasts.py:4",
+      "verify_gdps.py:3",
+      "verify_geps.py:4",
+      "verify_icon.py:4",
+      "verify_multimodel_consensus.py:4"
+    ],
+    "typing": [
+      "audit_multicycle_readiness.py:10",
+      "build_run_catalog.py:6",
+      "calculate_aifs_ens_global.py:7",
+      "calculate_ecmwf_ens_global.py:7",
+      "calculate_geps_global.py:7",
+      "snapshot_run.py:14"
+    ],
+    "functools": [
+      "build_multimodel_consensus.py:4"
+    ],
+    "numpy": [
+      "build_multimodel_consensus.py:7",
+      "calculate_aifs_ens_global.py:9",
+      "calculate_ecmwf_ens_global.py:9",
+      "calculate_era5t_global.py:5",
+      "calculate_gdps_global.py:8",
+      "calculate_gefs_global.py:8",
+      "calculate_geps_global.py:9",
+      "calculate_gfs_global.py:9",
+      "calculate_icon_global.py:7",
+      "compare_ensemble_systems.py:5",
+      "compare_three_ensemble_systems.py:5"
+    ],
+    "pandas": [
+      "build_multimodel_consensus.py:8",
+      "build_run_catalog.py:8",
+      "calculate_aifs_ens_global.py:10",
+      "calculate_ecmwf_ens_global.py:10",
+      "calculate_era5t_global.py:6",
+      "calculate_gdps_global.py:9",
+      "calculate_gefs_global.py:9",
+      "calculate_geps_global.py:10",
+      "calculate_gfs_global.py:10",
+      "calculate_icon_global.py:8",
+      "compare_all_global_models.py:5",
+      "compare_ensemble_systems.py:6",
+      "compare_global_models.py:5",
+      "compare_three_ensemble_systems.py:6",
+      "snapshot_run.py:16",
+      "verification_status.py:5",
+      "verify_aifs_ens.py:6",
+      "verify_ecmwf_ens.py:6",
+      "verify_forecasts.py:6",
+      "verify_gdps.py:5",
+      "verify_geps.py:6",
+      "verify_icon.py:6",
+      "verify_multimodel_consensus.py:6"
+    ],
+    "datetime": [
+      "calculate_aifs_ens_global.py:5",
+      "calculate_ecmwf_ens_global.py:5",
+      "calculate_geps_global.py:5",
+      "calculate_gfs_global.py:5",
+      "download_aifs_ens.py:7",
+      "download_ecmwf_ens.py:7",
+      "download_era5t.py:6",
+      "download_gdps.py:6",
+      "download_geps.py:7",
+      "download_gfs.py:5",
+      "snapshot_run.py:12"
+    ],
+    "eccodes": [
+      "calculate_aifs_ens_global.py:11",
+      "calculate_ecmwf_ens_global.py:11",
+      "calculate_geps_global.py:11"
+    ],
+    "xarray": [
+      "calculate_era5t_global.py:7",
+      "calculate_gdps_global.py:10",
+      "calculate_gefs_global.py:10",
+      "calculate_gfs_global.py:11",
+      "calculate_icon_global.py:9"
+    ],
+    "cfgrib": [
+      "calculate_gdps_global.py:7",
+      "calculate_gefs_global.py:7",
+      "calculate_gfs_global.py:8"
+    ],
+    "time": [
+      "download_aifs_ens.py:6",
+      "download_ecmwf_ens.py:6",
+      "download_gdps.py:5",
+      "download_gefs.py:6",
+      "download_geps.py:6",
+      "download_icon.py:7"
+    ],
+    "ecmwf": [
+      "download_aifs_ens.py:10",
+      "download_ecmwf_ens.py:10"
+    ],
+    "zipfile": [
+      "download_era5t.py:5"
+    ],
+    "cdsapi": [
+      "download_era5t.py:9"
+    ],
+    "urllib": [
+      "download_gdps.py:8"
+    ],
+    "requests": [
+      "download_gdps.py:10",
+      "download_gefs.py:11",
+      "download_geps.py:10",
+      "download_gfs.py:8",
+      "download_icon.py:10"
+    ],
+    "threading": [
+      "download_gefs.py:5"
+    ],
+    "collections": [
+      "download_gefs.py:7"
+    ],
+    "concurrent": [
+      "download_gefs.py:8"
+    ],
+    "bz2": [
+      "download_icon.py:4"
+    ],
+    "hashlib": [
+      "snapshot_run.py:5"
+    ],
+    "importlib": [
+      "snapshot_run.py:6"
+    ],
+    "platform": [
+      "snapshot_run.py:8"
+    ],
+    "shutil": [
+      "snapshot_run.py:9"
+    ]
+  },
+  "distribution_information": [
+    {
+      "import": "__future__",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "argparse",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "bz2",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "cdsapi",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "cdsapi",
+          "version": "0.7.7"
+        }
+      ]
+    },
+    {
+      "import": "cfgrib",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "cfgrib",
+          "version": "0.9.15.1"
+        }
+      ]
+    },
+    {
+      "import": "collections",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "concurrent",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "csv",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "datetime",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "eccodes",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "eccodes",
+          "version": "2.47.0"
+        }
+      ]
+    },
+    {
+      "import": "ecmwf",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "ecmwf-opendata",
+          "version": "0.3.31"
+        },
+        {
+          "distribution": "ecmwf-datastores-client",
+          "version": "0.5.1"
+        }
+      ]
+    },
+    {
+      "import": "functools",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "hashlib",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "importlib",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "json",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "numpy",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "numpy",
+          "version": "2.5.1"
+        }
+      ]
+    },
+    {
+      "import": "pandas",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "pandas",
+          "version": "3.0.5"
+        }
+      ]
+    },
+    {
+      "import": "pathlib",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "platform",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "re",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "requests",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "requests",
+          "version": "2.34.2"
+        }
+      ]
+    },
+    {
+      "import": "shutil",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "subprocess",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "sys",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "threading",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "time",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "typing",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "urllib",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    },
+    {
+      "import": "xarray",
+      "standard_library": false,
+      "import_available": true,
+      "distributions": [
+        {
+          "distribution": "xarray",
+          "version": "2026.7.0"
+        }
+      ]
+    },
+    {
+      "import": "zipfile",
+      "standard_library": true,
+      "import_available": true,
+      "distributions": []
+    }
+  ],
+  "syntax_errors": [],
+  "executables": [
+    {
+      "name": "python",
+      "path": "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "Python 3.13.9",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "python3",
+      "path": "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python3",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python3",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "Python 3.13.9",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "pip",
+      "path": "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/pip",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/pip",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "pip 26.1.2 from /Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/lib/python3.13/site-packages/pip (python 3.13)",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "git",
+      "path": "/usr/bin/git",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/usr/bin/git",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "git version 2.50.1 (Apple Git-155)",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "gcloud",
+      "path": "/opt/homebrew/share/google-cloud-sdk/bin/gcloud",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/opt/homebrew/share/google-cloud-sdk/bin/gcloud",
+          "version"
+        ],
+        "returncode": 0,
+        "stdout": "Google Cloud SDK 578.0.0\nbq 2.1.36\nbundled-python3-unix 3.14.6\ncore 2026.07.24\ngcloud-crc32c 1.0.0\ngsutil 5.37",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "gsutil",
+      "path": "/opt/homebrew/share/google-cloud-sdk/bin/gsutil",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/opt/homebrew/share/google-cloud-sdk/bin/gsutil",
+          "version"
+        ],
+        "returncode": 0,
+        "stdout": "gsutil version: 5.37",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "grib_count",
+      "path": "/opt/homebrew/bin/grib_count",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/opt/homebrew/bin/grib_count",
+          "-V"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "-V: No such file or directory"
+      }
+    },
+    {
+      "name": "grib_ls",
+      "path": "/opt/homebrew/bin/grib_ls",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/opt/homebrew/bin/grib_ls",
+          "-V"
+        ],
+        "returncode": 0,
+        "stdout": "ecCodes Version 2.48.0",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "grib_get",
+      "path": "/opt/homebrew/bin/grib_get",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/opt/homebrew/bin/grib_get",
+          "-V"
+        ],
+        "returncode": 0,
+        "stdout": "ecCodes Version 2.48.0",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "grib_get_data",
+      "path": "/opt/homebrew/bin/grib_get_data",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/opt/homebrew/bin/grib_get_data",
+          "-V"
+        ],
+        "returncode": 0,
+        "stdout": "ecCodes Version 2.48.0",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "cdo",
+      "path": null,
+      "available": false
+    },
+    {
+      "name": "ncks",
+      "path": null,
+      "available": false
+    },
+    {
+      "name": "uv",
+      "path": "/Users/felipecardozo/.local/bin/uv",
+      "available": true,
+      "version_command": {
+        "command": [
+          "/Users/felipecardozo/.local/bin/uv",
+          "--version"
+        ],
+        "returncode": 0,
+        "stdout": "uv 0.11.24 (5e04460c0 2026-06-23 aarch64-apple-darwin)",
+        "stderr": ""
+      }
+    }
+  ],
+  "pip_check": {
+    "command": [
+      "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model/.venv/bin/python3",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "returncode": 0,
+    "stdout": "No broken requirements found.",
+    "stderr": ""
+  },
+  "pip_freeze": [
+    "attrs==26.1.0",
+    "cdsapi==0.7.7",
+    "certifi==2026.7.22",
+    "cffi==2.1.0",
+    "cfgrib==0.9.15.1",
+    "charset-normalizer==3.4.9",
+    "click==8.4.2",
+    "eccodes==2.47.0",
+    "eccodeslib==2.48.0.26",
+    "eckitlib==2.1.1.26",
+    "ecmwf-datastores-client==0.5.1",
+    "ecmwf-opendata==0.3.31",
+    "findlibs==0.1.3",
+    "idna==3.18",
+    "multiurl==0.3.9",
+    "numpy==2.5.1",
+    "packaging==26.2",
+    "pandas==3.0.5",
+    "pycparser==3.0",
+    "python-dateutil==2.9.0.post0",
+    "pytz==2026.3.post1",
+    "requests==2.34.2",
+    "six==1.17.0",
+    "tqdm==4.70.0",
+    "typing_extensions==4.16.0",
+    "urllib3==2.7.0",
+    "xarray==2026.7.0"
+  ]
+}
