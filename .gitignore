@@ -1,0 +1,16 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Generated climate data
+data/
+output/
+
+# Local archived copies; keep manifests/indexes
+archive/runs/*/output/
+archive/runs/*/code_snapshot/
+.env.gcp.local
+logs/
+.DS_Store

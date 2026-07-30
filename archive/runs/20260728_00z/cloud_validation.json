@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "20260728_00z",
+  "project_id": "gtf-forecast-20260729-a7c9",
+  "bucket": "gtf-forecast-20260729-a7c9-data",
+  "raw_prefix": "gs://gtf-forecast-20260729-a7c9-data/raw/20260728_00z",
+  "validated_utc": "2026-07-30T03:57:18.610712+00:00",
+  "expected_counts": {
+    "aifs_ens": 82,
+    "ecmwf_ens": 82,
+    "gdps": 41,
+    "gefs": 1272,
+    "geps": 41,
+    "icon": 93
+  },
+  "cloud_counts": {
+    "aifs_ens": 82,
+    "ecmwf_ens": 82,
+    "gdps": 41,
+    "gefs": 1272,
+    "geps": 41,
+    "icon": 93
+  },
+  "expected_total_objects": 1611,
+  "cloud_total_objects": 1611,
+  "cloud_total_bytes": 3838220039,
+  "restore_test": {
+    "cloud_object": "gs://gtf-forecast-20260729-a7c9-data/raw/20260728_00z/aifs_ens/control/aifs_ens_20260728_00z_f000_control.grib2",
+    "local_file": "data/aifs_ens/20260728_00z/control/aifs_ens_20260728_00z_f000_control.grib2",
+    "restored_file": "/tmp/aifs_ens_20260728_00z_f000_control.grib2",
+    "local_sha256": "3e5066367ab7d84270414e689337476ae3a8b1481cc3f65c5e73ec50f046919e",
+    "restored_sha256": "3e5066367ab7d84270414e689337476ae3a8b1481cc3f65c5e73ec50f046919e",
+    "sha256_match": true,
+    "grib_messages": 1
+  },
+  "validation": {
+    "model_counts_match": true,
+    "total_object_count_match": true,
+    "restore_hash_match": true,
+    "restored_grib_readable": true
+  },
+  "validation_passed": true
+}

@@ -1,0 +1,1367 @@
+{
+  "cycle_utc": "00",
+  "environment": {
+    "packages": {
+      "cdsapi": "0.7.7",
+      "eccodes": "2.47.0",
+      "ecmwf-opendata": "0.3.31",
+      "numpy": "2.5.1",
+      "pandas": "3.0.5",
+      "requests": "2.34.2"
+    },
+    "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+    "python": "3.13.9 (v3.13.9:8183fa5e3f7, Oct 14 2025, 10:27:13) [Clang 16.0.0 (clang-1600.0.26.6)]"
+  },
+  "git": {
+    "branch": "main",
+    "commit": "5970457d1cf38e3994ab756844755384aa888480",
+    "status_porcelain": [
+      "?? __pycache__/snapshot_run.cpython-313.pyc",
+      "?? archive/",
+      "?? snapshot_run.py"
+    ],
+    "working_tree_clean": false
+  },
+  "initialization_date": "20260728",
+  "outputs": [
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble"
+      ],
+      "modified_utc": "2026-07-29T03:11:10.515253+00:00",
+      "path": "output/aifs_ens_20260728_00z_daily_summary.csv",
+      "rows": 10,
+      "sha256": "d5e809c9a33fbcf49e60edcdeac1c0b07623579c85618384ef99a69efbd979bb",
+      "size_bytes": 2587,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 10,
+      "modified_utc": "2026-07-29T03:11:10.516475+00:00",
+      "path": "output/aifs_ens_20260728_00z_daily_summary.json",
+      "sha256": "3a4d792555a4ac5461d8f95997415f041d31ddd4ededc972033a32a7a1a9f034",
+      "size_bytes": 4539,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "member",
+        "member_number",
+        "member_type",
+        "initialization_utc",
+        "forecast_hour",
+        "valid_time_utc",
+        "global_temperature_c",
+        "source_file",
+        "message_index",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-29T03:11:10.512091+00:00",
+      "path": "output/aifs_ens_20260728_00z_global_6hourly_members.csv",
+      "rows": 2091,
+      "sha256": "8f08e794b3e7c24fbec7e30f5eafeb6a84590b39aca14eb087681bc5534a58c4",
+      "size_bytes": 340314,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "member_type",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-29T03:11:10.514565+00:00",
+      "path": "output/aifs_ens_20260728_00z_global_daily_members.csv",
+      "rows": 561,
+      "sha256": "30059ade8aa32ab00e34a20b7a5b47439f6806e4b3096de586ea59bb4678309b",
+      "size_bytes": 61836,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble"
+      ],
+      "modified_utc": "2026-07-29T00:14:09.715527+00:00",
+      "path": "output/ecmwf_ens_20260728_00z_daily_summary.csv",
+      "rows": 10,
+      "sha256": "ba2291a70909af399fb6c5da4afe93cb94350ac89e74f135888e0c625c690d61",
+      "size_bytes": 2574,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 10,
+      "modified_utc": "2026-07-29T00:14:09.716969+00:00",
+      "path": "output/ecmwf_ens_20260728_00z_daily_summary.json",
+      "sha256": "3c7442a27790b98edb15ec7450edaf70650d2c84564f0a17be14c23180c959de",
+      "size_bytes": 4539,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "member",
+        "member_number",
+        "member_type",
+        "initialization_utc",
+        "forecast_hour",
+        "valid_time_utc",
+        "global_temperature_c",
+        "source_file",
+        "message_index",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-29T00:14:09.709590+00:00",
+      "path": "output/ecmwf_ens_20260728_00z_global_6hourly_members.csv",
+      "rows": 2091,
+      "sha256": "806a95b5921c0e7d243f8b2d53deac4b0d7264fcd19240fa6a1dfd0f14276a6d",
+      "size_bytes": 342374,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "member_type",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-29T00:14:09.715114+00:00",
+      "path": "output/ecmwf_ens_20260728_00z_global_daily_members.csv",
+      "rows": 561,
+      "sha256": "a969e316c24888ade610c55d58da6326a1a112a8e91dc20a14b0347288c0fe73",
+      "size_bytes": 61824,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "era5t_hourly_mean_c",
+        "hourly_snapshots",
+        "hourly_minimum_c",
+        "hourly_maximum_c",
+        "era5t_matched_6h_c",
+        "matched_6h_snapshots",
+        "complete_hourly_day",
+        "complete_matched_6h_day",
+        "sampling_difference_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:35.890453+00:00",
+      "path": "output/era5t_global_daily.csv",
+      "rows": 2,
+      "sha256": "6abfe94b60d9a338f0230fd0ef21e5028fb65a0dbab5e3a16ed8dc7f038b0362",
+      "size_bytes": 462,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "valid_time_utc",
+        "era5t_global_c",
+        "source_file",
+        "date_utc",
+        "hour_utc"
+      ],
+      "modified_utc": "2026-07-29T03:33:35.890078+00:00",
+      "path": "output/era5t_global_hourly.csv",
+      "rows": 48,
+      "sha256": "4224f9bb4e172a353d48cb14b87c62d0bd06285851ada661145b60ec6375500c",
+      "size_bytes": 5061,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "initialization_utc",
+        "forecast_hour",
+        "valid_time_utc",
+        "global_temperature_c",
+        "source_file",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-28T12:11:56.416348+00:00",
+      "path": "output/gdps_20260728_00z_global_6hourly.csv",
+      "rows": 41,
+      "sha256": "02a47957ae7c55705ad76bbe4c5d5dcc6b3ca28d4ca64e6d4ac844edcc504a8a",
+      "size_bytes": 5388,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T12:11:56.416862+00:00",
+      "path": "output/gdps_20260728_00z_global_daily.csv",
+      "rows": 11,
+      "sha256": "f771299e081d5c0dfc25e57ce5bbe61205c15bdf44275751aba4d4267ce7f4c7",
+      "size_bytes": 1194,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T12:11:56.417286+00:00",
+      "path": "output/gdps_20260728_00z_global_daily_complete.csv",
+      "rows": 10,
+      "sha256": "095b3981adbc457d60acbe1f71656f01a0a074081c8fa77d2e52063d08b515d5",
+      "size_bytes": 1095,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 10,
+      "modified_utc": "2026-07-28T12:11:56.418622+00:00",
+      "path": "output/gdps_20260728_00z_global_daily_complete.json",
+      "sha256": "8ad92b77b1c4c024a57398eeb301207d6a617df79cefbcbbbc2b3a6258f6fb8e",
+      "size_bytes": 2679,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble"
+      ],
+      "modified_utc": "2026-07-28T11:31:24.975609+00:00",
+      "path": "output/gefs_20260728_00z_daily_summary.csv",
+      "rows": 10,
+      "sha256": "7f77da3e7a9b902632c19c94895fd3268cb47a3236c75a52e103b2af5b8ce70f",
+      "size_bytes": 2568,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 10,
+      "modified_utc": "2026-07-28T11:31:24.977573+00:00",
+      "path": "output/gefs_20260728_00z_daily_summary.json",
+      "sha256": "39f706b17ae07d16f4a4fe63b4bb7b115f5517f88e8315471fc5f5245ba1dc4d",
+      "size_bytes": 4541,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "member",
+        "initialization_utc",
+        "forecast_hour",
+        "valid_time_utc",
+        "global_temperature_c",
+        "file",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-28T11:31:24.972337+00:00",
+      "path": "output/gefs_20260728_00z_global_6hourly_members.csv",
+      "rows": 1271,
+      "sha256": "6894f3736083093d49876d270c6817f1eb4bb137be0db2954e91c149085e1536",
+      "size_bytes": 174384,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T11:31:24.974859+00:00",
+      "path": "output/gefs_20260728_00z_global_daily_members.csv",
+      "rows": 341,
+      "sha256": "e77915a337d887a8a30080632d31794e99e5c4151e50dab085c74deba3fa4014",
+      "size_bytes": 34253,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "july_28_31_mean_c",
+        "days_available"
+      ],
+      "modified_utc": "2026-07-28T11:30:50.409056+00:00",
+      "path": "output/gefs_20260728_00z_july_28_31_members.csv",
+      "rows": 31,
+      "sha256": "3e3da33aab6114d9dc0efa1d5997937d689eb1e83ccd92231386b50654c64972",
+      "size_bytes": 802,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date",
+        "gefs_mean_c",
+        "gefs_std_c",
+        "gefs_p05_c",
+        "gefs_p95_c",
+        "gefs_members",
+        "geps_mean_c",
+        "geps_std_c",
+        "geps_p05_c",
+        "geps_p95_c",
+        "geps_members",
+        "ecmwf_mean_c",
+        "ecmwf_std_c",
+        "ecmwf_p05_c",
+        "ecmwf_p95_c",
+        "ecmwf_members",
+        "geps_minus_gefs_c",
+        "ecmwf_minus_gefs_c",
+        "ecmwf_minus_geps_c",
+        "equal_system_mean_c",
+        "system_mean_range_c",
+        "warmest_ensemble",
+        "coolest_ensemble",
+        "three_interval_overlap_c",
+        "all_three_intervals_overlap"
+      ],
+      "modified_utc": "2026-07-29T00:15:59.137622+00:00",
+      "path": "output/gefs_geps_ecmwf_ens_20260728_00z.csv",
+      "rows": 10,
+      "sha256": "fa86594f0654edf85c310f019d768acef343084604152a6d6fbe7891bf9f31e1",
+      "size_bytes": 4094,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date",
+        "gefs_mean_c",
+        "gefs_median_c",
+        "gefs_std_c",
+        "gefs_p05_c",
+        "gefs_p95_c",
+        "gefs_min_c",
+        "gefs_max_c",
+        "gefs_control_c",
+        "gefs_members",
+        "geps_mean_c",
+        "geps_median_c",
+        "geps_std_c",
+        "geps_p05_c",
+        "geps_p95_c",
+        "geps_min_c",
+        "geps_max_c",
+        "geps_control_c",
+        "geps_members",
+        "geps_minus_gefs_mean_c",
+        "absolute_mean_difference_c",
+        "pooled_ensemble_spread_c",
+        "standardized_mean_difference",
+        "p05_p95_overlap_c",
+        "p05_p95_union_c",
+        "p05_p95_overlap_fraction",
+        "central_intervals_overlap",
+        "combined_ensemble_mean_c"
+      ],
+      "modified_utc": "2026-07-28T19:10:33.885660+00:00",
+      "path": "output/gefs_vs_geps_20260728_00z.csv",
+      "rows": 10,
+      "sha256": "fb41bdf6f7a52852ee9a285ee7bcd569b045d20f85d94d5b72cab75ae4fe2830",
+      "size_bytes": 5211,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble"
+      ],
+      "modified_utc": "2026-07-28T19:10:11.127214+00:00",
+      "path": "output/geps_20260728_00z_daily_summary.csv",
+      "rows": 10,
+      "sha256": "b094f1bce9197f74854d35a6516dce0952eec8a21116a3747a3fe5ddd4362efc",
+      "size_bytes": 2578,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 10,
+      "modified_utc": "2026-07-28T19:10:11.128341+00:00",
+      "path": "output/geps_20260728_00z_daily_summary.json",
+      "sha256": "294af94626c934b02924585f8d7cfd5ca0e78fa8d279e79b11245e71fa0f20d1",
+      "size_bytes": 4542,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "member",
+        "perturbation_number",
+        "type_of_ensemble_forecast",
+        "initialization_utc",
+        "forecast_hour",
+        "valid_time_utc",
+        "global_temperature_c",
+        "source_file",
+        "message_index",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-28T19:10:11.125581+00:00",
+      "path": "output/geps_20260728_00z_global_6hourly_members.csv",
+      "rows": 861,
+      "sha256": "600afec27dbe8782ad2ce987aa4db5655b9a94a33d9ff943ef4120eb1ba60ea8",
+      "size_bytes": 127796,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T19:10:11.126735+00:00",
+      "path": "output/geps_20260728_00z_global_daily_members.csv",
+      "rows": 231,
+      "sha256": "cc5d119abc2deb7cb3d0c8fae2308d60adefbc5dfe6981744cd5ecfd04baeca5",
+      "size_bytes": 23226,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date",
+        "gfs_c",
+        "gefs_mean_c",
+        "gefs_median_c",
+        "p05_c",
+        "p95_c",
+        "gefs_min_c",
+        "gefs_max_c",
+        "gefs_std_c",
+        "gdps_c",
+        "gfs_minus_gefs_mean_c",
+        "gdps_minus_gefs_mean_c",
+        "gdps_minus_gfs_c",
+        "gdps_inside_gefs_p05_p95",
+        "three_model_mean_c",
+        "three_model_std_c"
+      ],
+      "modified_utc": "2026-07-28T12:12:57.720182+00:00",
+      "path": "output/gfs_gefs_gdps_20260728_00z.csv",
+      "rows": 10,
+      "sha256": "cb5ade17801d0f4633fb83683118b7739db1b0fb6f19b5ba128dad2bb8b2a33f",
+      "size_bytes": 3067,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date",
+        "gfs_c",
+        "gefs_mean_c",
+        "gefs_median_c",
+        "gefs_std_c",
+        "p05_c",
+        "p95_c",
+        "gefs_min_c",
+        "gefs_max_c",
+        "gdps_c",
+        "icon_c",
+        "gfs_minus_gefs_mean_c",
+        "gdps_minus_gefs_mean_c",
+        "icon_minus_gefs_mean_c",
+        "icon_minus_gfs_c",
+        "icon_minus_gdps_c",
+        "gfs_inside_gefs_p05_p95",
+        "gdps_inside_gefs_p05_p95",
+        "icon_inside_gefs_p05_p95",
+        "raw_four_system_mean_c",
+        "raw_four_system_median_c",
+        "raw_four_system_min_c",
+        "raw_four_system_max_c",
+        "raw_four_system_range_c",
+        "raw_four_system_std_c",
+        "warmest_system",
+        "coolest_system"
+      ],
+      "modified_utc": "2026-07-28T12:40:46.633075+00:00",
+      "path": "output/gfs_gefs_gdps_icon_20260728_00z.csv",
+      "rows": 7,
+      "sha256": "8e0813388abc6c7bca5a5d7b41967f35374bed0dddadc3b8ec61692f5cdc0b71",
+      "size_bytes": 3506,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "file",
+        "valid_time_utc",
+        "forecast_hour",
+        "global_temperature_c",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-28T08:55:48.705012+00:00",
+      "path": "output/gfs_global_6hourly.csv",
+      "rows": 41,
+      "sha256": "2a46270ffc6f66c3a09c1ae0f12dfa35b6c09e1f3c2dc6fb3a7a2066f03e0b37",
+      "size_bytes": 4254,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T08:55:48.705848+00:00",
+      "path": "output/gfs_global_daily.csv",
+      "rows": 11,
+      "sha256": "46bbc2c5827f1b5d8ec7ab139d51547aa1966176460a844c406353d9e1a2e73e",
+      "size_bytes": 1072,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T11:32:49.723062+00:00",
+      "path": "output/gfs_global_daily_complete.csv",
+      "rows": 10,
+      "sha256": "653f6b1a34130f5651935e98b367b034b232a1508905440e30b7729fe8ce66dc",
+      "size_bytes": 981,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date",
+        "global_temperature_c",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "p05_c",
+        "p95_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "ensemble_std_c",
+        "gfs_minus_gefs_mean_c",
+        "gfs_inside_p05_p95",
+        "gfs_below_gefs_min"
+      ],
+      "modified_utc": "2026-07-28T11:33:26.815204+00:00",
+      "path": "output/gfs_vs_gefs_20260728_00z.csv",
+      "rows": 10,
+      "sha256": "9e836be0289fab70cdf949f9fcb3018338c0539e6048fb69fea3f22af575bee6",
+      "size_bytes": 2094,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "initialization_utc",
+        "forecast_hour",
+        "valid_time_utc",
+        "global_temperature_c",
+        "source_file",
+        "date_utc"
+      ],
+      "modified_utc": "2026-07-28T12:38:01.119792+00:00",
+      "path": "output/icon_20260728_00z_global_6hourly.csv",
+      "rows": 31,
+      "sha256": "db5a0e485975d09fcb0ea3e712dd12e5d44ea9893a95e1c875d0e87f4a78f8d7",
+      "size_bytes": 5452,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T12:38:01.120350+00:00",
+      "path": "output/icon_20260728_00z_global_daily.csv",
+      "rows": 8,
+      "sha256": "2cc78ccba20f274d8a8b793ae2a15df9324efb925c95740ed737ad87b0a59747",
+      "size_bytes": 900,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day"
+      ],
+      "modified_utc": "2026-07-28T12:38:01.120763+00:00",
+      "path": "output/icon_20260728_00z_global_daily_complete.csv",
+      "rows": 7,
+      "sha256": "26a32a76891a7e0183ef258be2ca869ad971337006a4aca6f2154ac04e0cc5bc",
+      "size_bytes": 802,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 7,
+      "modified_utc": "2026-07-28T12:38:01.122535+00:00",
+      "path": "output/icon_20260728_00z_global_daily_complete.json",
+      "sha256": "a713967bdcd3f2fbd08e9545d7aa520c94f23ea6e75b03e355f163bf344691a1",
+      "size_bytes": 1874,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "date",
+        "gefs_mean_c",
+        "gefs_std_c",
+        "gefs_p05_c",
+        "gefs_p95_c",
+        "gefs_members",
+        "geps_mean_c",
+        "geps_std_c",
+        "geps_p05_c",
+        "geps_p95_c",
+        "geps_members",
+        "ifs_mean_c",
+        "ifs_std_c",
+        "ifs_p05_c",
+        "ifs_p95_c",
+        "ifs_members",
+        "aifs_mean_c",
+        "aifs_std_c",
+        "aifs_p05_c",
+        "aifs_p95_c",
+        "aifs_members",
+        "equal_center_mean_c",
+        "equal_center_median_c",
+        "physics_consensus_mean_c",
+        "aifs_minus_ifs_c",
+        "aifs_minus_physics_consensus_c",
+        "center_mean_min_c",
+        "center_mean_max_c",
+        "center_mean_range_c",
+        "between_center_std_c",
+        "warmest_system",
+        "coolest_system",
+        "within_center_rms_spread_c",
+        "multimodel_total_spread_c",
+        "structural_variance_fraction",
+        "normal_approx_multimodel_p05_c",
+        "normal_approx_multimodel_p95_c",
+        "common_interval_lower_c",
+        "common_interval_upper_c",
+        "common_central90_overlap_c",
+        "all_four_central_intervals_overlap",
+        "union_p05_c",
+        "union_p95_c",
+        "central90_union_width_c",
+        "common_to_union_overlap_fraction",
+        "disagreement_rank"
+      ],
+      "modified_utc": "2026-07-29T03:18:53.336552+00:00",
+      "path": "output/multimodel_consensus_20260728_00z.csv",
+      "rows": 10,
+      "sha256": "6fa2daecb64c334c187165ac9a1d3c48a856d1fbeeb6c4a7af4b140d2cd39777",
+      "size_bytes": 7898,
+      "suffix": ".csv"
+    },
+    {
+      "json_records": 10,
+      "modified_utc": "2026-07-29T03:18:53.337159+00:00",
+      "path": "output/multimodel_consensus_20260728_00z.json",
+      "sha256": "b00b7cf2696e8451cc8e20bb63a7f0141cf256deff3650dcd381f622a63163c8",
+      "size_bytes": 16663,
+      "suffix": ".json"
+    },
+    {
+      "columns": [
+        "member",
+        "member_type",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_member_c",
+        "member_absolute_error_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:37.216046+00:00",
+      "path": "output/verification/aifs_ens_20260728_00z_member_errors.csv",
+      "rows": 0,
+      "sha256": "28303ae1d9e03e6b565d215290531d0124c6b51fcb50d7371cdef1059ade6815",
+      "size_bytes": 261,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_aifs_mean_c",
+        "aifs_mean_absolute_error_c",
+        "actual_inside_p05_p95",
+        "actual_inside_min_max"
+      ],
+      "modified_utc": "2026-07-29T03:33:37.215657+00:00",
+      "path": "output/verification/aifs_ens_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "f738aff07d3d49c65c1fd85ac2d234941bfd1d5346f4ae312e074e2bb4842a66",
+      "size_bytes": 332,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "member_type",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_member_c",
+        "member_absolute_error_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:37.000627+00:00",
+      "path": "output/verification/ecmwf_ens_20260728_00z_member_errors.csv",
+      "rows": 0,
+      "sha256": "28303ae1d9e03e6b565d215290531d0124c6b51fcb50d7371cdef1059ade6815",
+      "size_bytes": 261,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_ecmwf_mean_c",
+        "ecmwf_mean_absolute_error_c",
+        "actual_inside_p05_p95",
+        "actual_inside_min_max"
+      ],
+      "modified_utc": "2026-07-29T03:33:37.000484+00:00",
+      "path": "output/verification/ecmwf_ens_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "b9b53222c9a1a4958273e07e7d3025c65030a4e91c1307df378dbf9ed8a0b319",
+      "size_bytes": 334,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.362363+00:00",
+      "path": "output/verification/gdps_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "796733145b1b2c214436ff652b8e5a2d131d4a3ef9b797fcef87f8e5ef3a753a",
+      "size_bytes": 196,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.150056+00:00",
+      "path": "output/verification/gefs_20260728_00z_member_errors.csv",
+      "rows": 0,
+      "sha256": "452e841454abfaa6758f37a5b0def673a0e62c1c0cff6b2510c065d210c70fcf",
+      "size_bytes": 203,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.147914+00:00",
+      "path": "output/verification/gefs_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "3c3a8281e2d2fca0a70db61388568faed58562ccb1c693b0e0ca551d63757723",
+      "size_bytes": 236,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "member",
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_member_c",
+        "member_absolute_error_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.786263+00:00",
+      "path": "output/verification/geps_20260728_00z_member_errors.csv",
+      "rows": 0,
+      "sha256": "82c6093b6ab256bb45cd983a3a6169e23c0fafd93ce6dd66716be6351f2bcb9c",
+      "size_bytes": 249,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "ensemble_mean_c",
+        "ensemble_median_c",
+        "ensemble_std_c",
+        "ensemble_min_c",
+        "ensemble_max_c",
+        "members_available",
+        "p05_c",
+        "p25_c",
+        "p75_c",
+        "p95_c",
+        "control_c",
+        "perturbed_mean_c",
+        "complete_ensemble",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_geps_mean_c",
+        "geps_mean_absolute_error_c",
+        "geps_mean_squared_error_c2",
+        "actual_inside_p05_p95",
+        "actual_inside_min_max"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.786117+00:00",
+      "path": "output/verification/geps_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "fe28b776e3ae125409b8e0146c9e92f569e3a117fc47b15be34f17e57ee5ebe0",
+      "size_bytes": 359,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.146244+00:00",
+      "path": "output/verification/gfs_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "39384223281791722ced884b9b75e85f07a26bd2142f10998fde7c9c4c3ed4f4",
+      "size_bytes": 152,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date_utc",
+        "global_temperature_c",
+        "snapshots",
+        "minimum_snapshot_c",
+        "maximum_snapshot_c",
+        "minimum_forecast_hour",
+        "maximum_forecast_hour",
+        "complete_day",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_icon_c",
+        "icon_absolute_error_c",
+        "icon_squared_error_c2"
+      ],
+      "modified_utc": "2026-07-29T03:33:36.574166+00:00",
+      "path": "output/verification/icon_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "731fec3d96e1cb57cbb2cb5fd4cdf8eab3f05ecf63bea042f9a82c01171c08e6",
+      "size_bytes": 260,
+      "suffix": ".csv"
+    },
+    {
+      "columns": [
+        "date",
+        "gefs_mean_c",
+        "gefs_std_c",
+        "gefs_p05_c",
+        "gefs_p95_c",
+        "gefs_members",
+        "geps_mean_c",
+        "geps_std_c",
+        "geps_p05_c",
+        "geps_p95_c",
+        "geps_members",
+        "ifs_mean_c",
+        "ifs_std_c",
+        "ifs_p05_c",
+        "ifs_p95_c",
+        "ifs_members",
+        "aifs_mean_c",
+        "aifs_std_c",
+        "aifs_p05_c",
+        "aifs_p95_c",
+        "aifs_members",
+        "equal_center_mean_c",
+        "equal_center_median_c",
+        "physics_consensus_mean_c",
+        "aifs_minus_ifs_c",
+        "aifs_minus_physics_consensus_c",
+        "center_mean_min_c",
+        "center_mean_max_c",
+        "center_mean_range_c",
+        "between_center_std_c",
+        "warmest_system",
+        "coolest_system",
+        "within_center_rms_spread_c",
+        "multimodel_total_spread_c",
+        "structural_variance_fraction",
+        "normal_approx_multimodel_p05_c",
+        "normal_approx_multimodel_p95_c",
+        "common_interval_lower_c",
+        "common_interval_upper_c",
+        "common_central90_overlap_c",
+        "all_four_central_intervals_overlap",
+        "union_p05_c",
+        "union_p95_c",
+        "central90_union_width_c",
+        "common_to_union_overlap_fraction",
+        "disagreement_rank",
+        "date_utc",
+        "era5t_hourly_mean_c",
+        "era5t_matched_6h_c",
+        "sampling_difference_c",
+        "actual_minus_equal_center_c",
+        "equal_center_absolute_error_c",
+        "actual_inside_multimodel_normal_p05_p95",
+        "actual_inside_center_interval_union"
+      ],
+      "modified_utc": "2026-07-29T03:33:37.438240+00:00",
+      "path": "output/verification/multimodel_consensus_20260728_00z_vs_era5t.csv",
+      "rows": 0,
+      "sha256": "d1055c6bb0dfb9faee3598a008f4976b04d8aa9a44725e3cb749fbfbf1ec4ca7",
+      "size_bytes": 1011,
+      "suffix": ".csv"
+    }
+  ],
+  "project_root_at_creation": "/Users/felipecardozo/Desktop/Stats/Global-Temperature-Model",
+  "raw_data_directories": [
+    {
+      "file_count": 82,
+      "path": "data/aifs_ens/20260728_00z",
+      "suffix_counts": {
+        ".grib2": 82
+      },
+      "total_bytes": 1302507161
+    },
+    {
+      "file_count": 82,
+      "path": "data/ecmwf_ens/20260728_00z",
+      "suffix_counts": {
+        ".grib2": 82
+      },
+      "total_bytes": 1365076665
+    },
+    {
+      "file_count": 41,
+      "path": "data/gdps/20260728_00z",
+      "suffix_counts": {
+        ".grib2": 41
+      },
+      "total_bytes": 42253022
+    },
+    {
+      "file_count": 1272,
+      "path": "data/gefs/20260728_00z",
+      "suffix_counts": {
+        ".grib2": 1271,
+        "<none>": 1
+      },
+      "total_bytes": 454285220
+    },
+    {
+      "file_count": 41,
+      "path": "data/geps/20260728_00z",
+      "suffix_counts": {
+        ".grib2": 41
+      },
+      "total_bytes": 137071895
+    },
+    {
+      "file_count": 93,
+      "path": "data/icon/20260728_00z",
+      "suffix_counts": {
+        ".grib2": 93
+      },
+      "total_bytes": 537026076
+    }
+  ],
+  "run_id": "20260728_00z",
+  "schema_version": 1,
+  "scripts": [
+    {
+      "modified_utc": "2026-07-29T03:18:11.723390+00:00",
+      "path": "build_multimodel_consensus.py",
+      "sha256": "3c057d229c69f2dcf6d84ce6ecf2ff0f57eb4ea649cbafc8966a5e6853a7a23e",
+      "size_bytes": 10524,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T03:10:38.690987+00:00",
+      "path": "calculate_aifs_ens_global.py",
+      "sha256": "bacb00df15ef166c55a92a31d3ea6244bb8a77289e71a6b509f4b71c4435b0a3",
+      "size_bytes": 17231,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T00:12:54.367750+00:00",
+      "path": "calculate_ecmwf_ens_global.py",
+      "sha256": "9bf720842624723d87ae603c5d1c821b096ad3956cf2ed77836fd753b9b0950b",
+      "size_bytes": 17238,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T11:54:31.622268+00:00",
+      "path": "calculate_era5t_global.py",
+      "sha256": "c860d40b2326fc65d6a41edbfba2aa14dfd27a7c64424a6bf07428b948cc2d06",
+      "size_bytes": 7080,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:11:15.877692+00:00",
+      "path": "calculate_gdps_global.py",
+      "sha256": "65b9b97645291439ed0af7e9ef37587690d4a4e660eafe22d1c4f4058612f6cc",
+      "size_bytes": 9969,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T10:25:09.448889+00:00",
+      "path": "calculate_gefs_global.py",
+      "sha256": "b7addd82d7ba1fb8a90c78454a0fe20e4949e8db357884b70559c802829f4a40",
+      "size_bytes": 11140,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T19:09:35.109739+00:00",
+      "path": "calculate_geps_global.py",
+      "sha256": "ba127b54a5aaaefcc3fe7a7d01c0b5984d4d8894d35279f3daf5bf98c03af699",
+      "size_bytes": 16622,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T08:55:09.213592+00:00",
+      "path": "calculate_gfs_global.py",
+      "sha256": "24236a95573758c821315472be6e299e317603ddbfdad126aabcc727134dbbf4",
+      "size_bytes": 4873,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:27:32.320293+00:00",
+      "path": "calculate_icon_global.py",
+      "sha256": "89f304a101b5d3c96f0cfb1cea882454dbba590722571369984f435253e70cd8",
+      "size_bytes": 11571,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:40:29.590605+00:00",
+      "path": "compare_all_global_models.py",
+      "sha256": "bc46257d00f4cf62a8baafb5249fd95a507da10e882f5b93b2a02169cdc31937",
+      "size_bytes": 6928,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T19:10:24.396742+00:00",
+      "path": "compare_ensemble_systems.py",
+      "sha256": "4fad661621e855f90d061b09e0e0df2ff6eeeff619de078dec92d5069a7be10b",
+      "size_bytes": 6180,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:12:45.724329+00:00",
+      "path": "compare_global_models.py",
+      "sha256": "46cd95f0e583c31c96faecb6ba10531ff47ff61ac1d0da8f9911225d4b31347d",
+      "size_bytes": 4612,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T00:15:48.077238+00:00",
+      "path": "compare_three_ensemble_systems.py",
+      "sha256": "f92307d45fd19b15339ccc7e4cc26dc86f704ce945815563d82384f793f9f491",
+      "size_bytes": 4988,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T01:44:22.859588+00:00",
+      "path": "download_aifs_ens.py",
+      "sha256": "6c8f8d7685e6b19a2b25116a3f4f801372349134ab0a34e47d0d284ae0c5d25a",
+      "size_bytes": 9039,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T20:00:10.706873+00:00",
+      "path": "download_ecmwf_ens.py",
+      "sha256": "eb8ed9b3e33f977f3afd24ce5f7917198aa5c719e7dafa2189b6843c35b7f773",
+      "size_bytes": 9038,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:03:18.046714+00:00",
+      "path": "download_era5t.py",
+      "sha256": "b1722813dd1cec8a0904d622cd5cc8b8f0f1191a9eed8ece80685b374018c84f",
+      "size_bytes": 6386,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:08:56.021024+00:00",
+      "path": "download_gdps.py",
+      "sha256": "70bac794910df8941e001034d38a0970ff67655eef1af8005cbf196382d019c0",
+      "size_bytes": 8298,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T10:23:59.641871+00:00",
+      "path": "download_gefs.py",
+      "sha256": "38542397e4671305f094e06e958152627cb85e953c23d3b2242ed9dc4a0ac366",
+      "size_bytes": 8711,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T19:07:29.374984+00:00",
+      "path": "download_geps.py",
+      "sha256": "5dc80750e2ecb2cac8e1d9aba40b0498c4753e55fab0137b17689199de82437b",
+      "size_bytes": 9695,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T08:52:41.644597+00:00",
+      "path": "download_gfs.py",
+      "sha256": "226a96f00690454ff60d67e9f1e0fe1bf8edcb0ca7b859ce96fb58d5fd5dd561",
+      "size_bytes": 3470,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:22:24.185789+00:00",
+      "path": "download_icon.py",
+      "sha256": "1446cf64abfe070023f4cb75be28778d4643a3b6e0e993e1827c5e17fcc8f655",
+      "size_bytes": 8553,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-30T00:29:00.358004+00:00",
+      "path": "snapshot_run.py",
+      "sha256": "06558504858fc4f4655a47a1d4bd7ac5e75fd15c7da399f72fcf360f71817d33",
+      "size_bytes": 11316,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T03:32:03.745867+00:00",
+      "path": "update_verification.sh",
+      "sha256": "aa113e55b40f711ff52bd93892cb85eeb0bb75f952ada5f572e1c59424b6c321",
+      "size_bytes": 3085,
+      "suffix": ".sh"
+    },
+    {
+      "modified_utc": "2026-07-29T03:31:46.936043+00:00",
+      "path": "verification_status.py",
+      "sha256": "77c991e85b4553ee02f22048a638e354faa905b5460fb861462033053a4b93c6",
+      "size_bytes": 2899,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T03:31:24.060726+00:00",
+      "path": "verify_aifs_ens.py",
+      "sha256": "316cd5747e4e8f03f7e52371a50f5e9f8910b35b04d2c51883a55431ab77b1f8",
+      "size_bytes": 4328,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T00:16:28.278895+00:00",
+      "path": "verify_ecmwf_ens.py",
+      "sha256": "84d04985b99a0523370116d6d0ff0b2a55ca9330f4c02b189b25447aaad26986",
+      "size_bytes": 4339,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T11:51:31.828712+00:00",
+      "path": "verify_forecasts.py",
+      "sha256": "c6828c1d9aed234b54fe7d3ae6dc3124186859c17c620e07ec353d2269f89ec2",
+      "size_bytes": 6316,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:13:16.566131+00:00",
+      "path": "verify_gdps.py",
+      "sha256": "67abe22b22f5c0a6891b5b560430177cfb114467eb39492a750f7cb8a9be0d4c",
+      "size_bytes": 2523,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T19:11:01.247074+00:00",
+      "path": "verify_geps.py",
+      "sha256": "74b59a666add78a709450ce1d4984c3bb31924763061a7ca62173e439deb2d72",
+      "size_bytes": 5515,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-28T12:40:59.574776+00:00",
+      "path": "verify_icon.py",
+      "sha256": "af38507a266497ad5b0292d38d4c196cdb2341b8c0b2bbdf9b15236bce351b01",
+      "size_bytes": 4271,
+      "suffix": ".py"
+    },
+    {
+      "modified_utc": "2026-07-29T03:18:38.798394+00:00",
+      "path": "verify_multimodel_consensus.py",
+      "sha256": "df04812bb8e4015fdf7ad358721fa2fbdd9a1a6e2c4b85630c27e4e384b9416d",
+      "size_bytes": 4329,
+      "suffix": ".py"
+    }
+  ],
+  "snapshot_created_utc": "2026-07-30T00:29:14.951276+00:00"
+}
