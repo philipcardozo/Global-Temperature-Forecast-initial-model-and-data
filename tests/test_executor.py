@@ -141,3 +141,77 @@ def test_required_failure_stops_pipeline(
     skipped_stage = payload["stages"][2]
 
     assert skipped_stage["log_path"] is None
+
+
+def test_resume_keeps_succeeded_stages(
+    tmp_path: Path,
+) -> None:
+    state_path = tmp_path / "run_status.json"
+
+    failing = (
+        stage("already_done"),
+        stage(
+            "recoverable",
+            exit_code=9,
+        ),
+        stage("downstream"),
+    )
+
+    create_state(
+        state_path,
+        failing,
+    )
+
+    assert (
+        execute_plan(
+            state_path=state_path,
+            stages=failing,
+            project_root=ROOT,
+        )
+        == 9
+    )
+
+    first_completion = read_run_state(state_path)["stages"][0]["completed_utc"]
+
+    repaired = (
+        stage("already_done"),
+        stage("recoverable"),
+        stage("downstream"),
+    )
+
+    return_code = execute_plan(
+        state_path=state_path,
+        stages=repaired,
+        project_root=ROOT,
+        resume=True,
+    )
+
+    payload = read_run_state(state_path)
+
+    assert return_code == 0
+    assert payload["status"] == "SUCCEEDED"
+
+    assert [item["status"] for item in payload["stages"]] == [
+        "SUCCEEDED",
+        "SUCCEEDED",
+        "SUCCEEDED",
+    ]
+
+    # The succeeded stage was not executed a second time.
+    assert payload["stages"][0]["completed_utc"] == first_completion
+
+    # A fully succeeded run is idempotent: resuming reruns nothing.
+    assert (
+        execute_plan(
+            state_path=state_path,
+            stages=repaired,
+            project_root=ROOT,
+            resume=True,
+        )
+        == 0
+    )
+
+    assert (
+        read_run_state(state_path)["stages"][2]["completed_utc"]
+        == (payload["stages"][2]["completed_utc"])
+    )

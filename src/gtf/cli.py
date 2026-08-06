@@ -96,8 +96,13 @@ def _run_pipeline(
 
     execute = bool(arguments.execute)
 
+    resume = bool(arguments.resume)
+
     if dry_run == execute:
         raise ValueError("Choose exactly one of --dry-run or --execute.")
+
+    if resume and not execute:
+        raise ValueError("--resume applies only to --execute.")
 
     if execute and config.execution_mode != "test":
         raise ValueError(
@@ -145,15 +150,20 @@ def _run_pipeline(
 
         return 0
 
-    write_execution_state(
-        state_path,
-        run_id=run_id,
-        pipeline_name=config.name,
-        config_path=config_path,
-        project_root=project_root,
-        stages=stages,
-        overwrite=bool(arguments.overwrite_state),
-    )
+    resuming = resume and state_path.is_file()
+
+    if resuming:
+        print("Resuming existing run state; SUCCEEDED stages are not rerun.")
+    else:
+        write_execution_state(
+            state_path,
+            run_id=run_id,
+            pipeline_name=config.name,
+            config_path=config_path,
+            project_root=project_root,
+            stages=stages,
+            overwrite=bool(arguments.overwrite_state),
+        )
 
     print("Executing test pipeline...")
 
@@ -161,6 +171,7 @@ def _run_pipeline(
         state_path=state_path,
         stages=stages,
         project_root=project_root,
+        resume=resuming,
     )
 
     print(f"State file: {state_path}")
@@ -264,6 +275,12 @@ def build_parser() -> argparse.ArgumentParser:
         "--execute",
         action="store_true",
         help=("Execute a configuration explicitly marked as a test pipeline."),
+    )
+
+    run_parser.add_argument(
+        "--resume",
+        action="store_true",
+        help=("Reuse an existing run state: keep SUCCEEDED stages and retry the rest."),
     )
 
     run_parser.add_argument(

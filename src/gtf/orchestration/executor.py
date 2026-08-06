@@ -45,6 +45,50 @@ def _stage_records(
     return records
 
 
+RESUMABLE_RUN_STATUS = frozenset(
+    {
+        "PLANNED",
+        "RUNNING",
+        "FAILED",
+        "COMPLETED_WITH_ERRORS",
+        "SUCCEEDED",
+    }
+)
+
+
+def _reset_unfinished_stages(
+    records: list[dict[str, Any]],
+    stages: tuple[PlannedStage, ...],
+) -> None:
+    """Return every non-succeeded stage to PENDING before a resumed run.
+
+    SUCCEEDED stages keep their record and are not executed again. Anything
+    else, including a RUNNING stage left behind by a crashed process, is
+    reset so the resumed run retries it.
+    """
+
+    for stage, record in zip(
+        stages,
+        records,
+        strict=True,
+    ):
+        if record["name"] != stage.name:
+            raise ValueError(
+                f"Resumed state stage {record['name']!r} does not match "
+                f"planned stage {stage.name!r}."
+            )
+
+        if record["status"] == "SUCCEEDED":
+            continue
+
+        record["status"] = "PENDING"
+        record["command"] = list(stage.command)
+        record["started_utc"] = None
+        record["completed_utc"] = None
+        record["return_code"] = None
+        record["error"] = None
+
+
 def _skip_remaining_stages(
     records: list[dict[str, Any]],
     *,
@@ -69,6 +113,7 @@ def execute_plan(
     state_path: Path,
     stages: tuple[PlannedStage, ...],
     project_root: Path,
+    resume: bool = False,
 ) -> int:
     """Execute stages sequentially and persist every transition."""
 
@@ -77,13 +122,21 @@ def execute_plan(
     if payload.get("dry_run") is not False:
         raise ValueError("A dry-run state cannot be executed.")
 
-    if payload.get("status") != "PLANNED":
-        raise ValueError("Execution requires a PLANNED state.")
-
     records = _stage_records(payload)
 
     if len(records) != len(stages):
         raise ValueError("State stage count does not match the execution plan.")
+
+    if resume:
+        if payload.get("status") not in RESUMABLE_RUN_STATUS:
+            raise ValueError(f"Run state {payload.get('status')!r} cannot be resumed.")
+
+        _reset_unfinished_stages(
+            records,
+            stages,
+        )
+    elif payload.get("status") != "PLANNED":
+        raise ValueError("Execution requires a PLANNED state. Use --resume instead.")
 
     logs_directory = state_path.parent / "logs"
 
@@ -109,6 +162,9 @@ def execute_plan(
             strict=True,
         )
     ):
+        if record["status"] == "SUCCEEDED":
+            continue
+
         started_utc = _utc_now()
 
         log_path = logs_directory / (f"{index + 1:02d}_{stage.name}.log")
