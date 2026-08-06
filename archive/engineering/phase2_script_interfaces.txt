@@ -1,0 +1,284 @@
+PHASE 2 SCRIPT INTERFACE INVENTORY
+========================================================================================
+
+Created UTC: 2026-08-06T18:17:57.439081+00:00
+Root-level Python scripts: 32
+
+audit_multicycle_readiness.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --manifest, --output-prefix, --run-id
+positional arguments: 0
+
+build_multimodel_consensus.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date
+positional arguments: 0
+
+build_run_catalog.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --archive-root, --output-prefix
+positional arguments: 0
+
+calculate_aifs_ens_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-perturbed, --step
+positional arguments: 0
+
+calculate_ecmwf_ens_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-perturbed, --step
+positional arguments: 0
+
+calculate_era5t_global.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+calculate_gdps_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --step
+positional arguments: 0
+
+calculate_gefs_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-members, --step
+positional arguments: 0
+
+calculate_geps_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-members, --step
+positional arguments: 0
+
+calculate_gfs_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --max-hour
+positional arguments: 0
+
+calculate_icon_global.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --step
+positional arguments: 0
+
+compare_all_global_models.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+compare_ensemble_systems.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+compare_global_models.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+compare_three_ensemble_systems.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+download_aifs_ens.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-perturbed, --max-hour, --pause, --source, --step
+positional arguments: 0
+
+download_ecmwf_ens.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-perturbed, --max-hour, --pause, --source, --step
+positional arguments: 0
+
+download_era5t.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --date, --end-date, --start-date
+positional arguments: 0
+
+download_gdps.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --max-hour, --pause, --step
+positional arguments: 0
+
+download_gefs.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --max-hour, --members, --request-interval, --step, --workers
+positional arguments: 0
+
+download_geps.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --expected-members, --max-hour, --pause, --step
+positional arguments: 0
+
+download_gfs.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --max-hour, --overwrite
+positional arguments: 0
+
+download_icon.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --date, --max-hour, --pause, --step
+positional arguments: 0
+
+snapshot_run.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --force, --init-date
+positional arguments: 0
+
+verification_status.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+verify_aifs_ens.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --init-date
+positional arguments: 0
+
+verify_ecmwf_ens.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --init-date
+positional arguments: 0
+
+verify_forecasts.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --init-date
+positional arguments: 0
+
+verify_gdps.py
+----------------------------------------------------------------------------------------
+argparse: False
+main function: True
+main guard: True
+options: none detected
+positional arguments: 0
+
+verify_geps.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --init-date
+positional arguments: 0
+
+verify_icon.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --init-date
+positional arguments: 0
+
+verify_multimodel_consensus.py
+----------------------------------------------------------------------------------------
+argparse: True
+main function: True
+main guard: True
+options: --cycle, --init-date
+positional arguments: 0
+
+SUMMARY
+========================================================================================
+
+Scripts with argparse but without --run-id or --date/--cycle:
+  build_run_catalog.py
+  download_era5t.py
+  snapshot_run.py
+  verify_aifs_ens.py
+  verify_ecmwf_ens.py
+  verify_forecasts.py
+  verify_geps.py
+  verify_icon.py
+  verify_multimodel_consensus.py
+
+Scripts without argparse:
+  calculate_era5t_global.py
+  compare_all_global_models.py
+  compare_ensemble_systems.py
+  compare_global_models.py
+  compare_three_ensemble_systems.py
+  verification_status.py
+  verify_gdps.py

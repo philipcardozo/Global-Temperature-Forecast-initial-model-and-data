@@ -1,0 +1,187 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - phase-1/reproducible-package
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: >-
+    ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.13.9"
+  UV_VERSION: "0.11.24"
+
+jobs:
+  quality:
+    name: Quality and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python
+        run: uv python install "$PYTHON_VERSION"
+
+      - name: Verify lock file
+        run: uv lock --check
+
+      - name: Synchronize environment
+        run: >-
+          uv sync
+          --frozen
+          --all-groups
+          --python "$PYTHON_VERSION"
+
+      - name: Check dependency compatibility
+        run: uv pip check
+
+      - name: Check formatting
+        run: uv run --frozen ruff format --check src tests scripts
+
+      - name: Run lint checks
+        run: uv run --frozen ruff check src tests scripts
+
+      - name: Run type checks
+        run: uv run --frozen mypy src/gtf
+
+      - name: Run tests
+        run: uv run --frozen pytest
+
+      - name: Validate production dry run
+        run: |
+          uv run --frozen gtf run \
+            --date 20260730 \
+            --cycle 00 \
+            --dry-run \
+            --state-root /tmp/gtf-ci-plans
+
+      - name: Execute harmless test pipeline
+        run: |
+          uv run --frozen gtf run \
+            --date 20260730 \
+            --cycle 00 \
+            --execute \
+            --config tests/fixtures/pipelines/test_pipeline.json \
+            --state-root /tmp/gtf-ci-execution
+
+      - name: Verify package CLI
+        run: |
+          uv run --frozen gtf --version
+          uv run --frozen gtf validate-run-id 20260728_00z
+
+      - name: Verify ecCodes Python API
+        run: |
+          uv run --frozen python - <<'PY'
+          import eccodes
+
+          version = eccodes.codes_get_api_version()
+
+          if not version:
+              raise RuntimeError(
+                  "ecCodes API version was empty."
+              )
+
+          print(f"ecCodes API: {version}")
+          PY
+
+  distribution:
+    name: Build and clean install
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    needs:
+      - quality
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: Install Python
+        run: uv python install "$PYTHON_VERSION"
+
+      - name: Build wheel and source distribution
+        run: uv build
+
+      - name: Verify distribution files
+        run: |
+          test "$(find dist -maxdepth 1 -name '*.whl' | wc -l)" -eq 1
+          test "$(find dist -maxdepth 1 -name '*.tar.gz' | wc -l)" -eq 1
+          ls -lh dist
+
+      - name: Create isolated installation
+        run: >-
+          uv venv
+          .venv-distribution-test
+          --python "$PYTHON_VERSION"
+
+      - name: Install built wheel
+        run: |
+          WHEEL="$(
+            find dist \
+              -maxdepth 1 \
+              -type f \
+              -name '*.whl' \
+              -print \
+              -quit
+          )"
+
+          test -n "$WHEEL"
+
+          uv pip install \
+            --python .venv-distribution-test/bin/python \
+            "$WHEEL"
+
+      - name: Test isolated CLI
+        run: |
+          .venv-distribution-test/bin/gtf --version
+
+          .venv-distribution-test/bin/gtf \
+            validate-run-id \
+            20260728_00z
+
+      - name: Test isolated imports
+        run: |
+          .venv-distribution-test/bin/python - <<'PY'
+          import eccodes
+          import gtf
+
+          assert gtf.__version__ == "0.1.0"
+
+          print(
+              "gtf:",
+              gtf.__version__,
+          )
+
+          print(
+              "ecCodes API:",
+              eccodes.codes_get_api_version(),
+          )
+          PY

@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "name": "daily-global-temperature-forecast",
+  "stages": [
+    {
+      "name": "download_gfs",
+      "category": "download",
+      "script": "download_gfs.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "download_gefs",
+      "category": "download",
+      "script": "download_gefs.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "download_gdps",
+      "category": "download",
+      "script": "download_gdps.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "download_geps",
+      "category": "download",
+      "script": "download_geps.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "download_icon",
+      "category": "download",
+      "script": "download_icon.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "download_ecmwf_ens",
+      "category": "download",
+      "script": "download_ecmwf_ens.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "download_aifs_ens",
+      "category": "download",
+      "script": "download_aifs_ens.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_gfs",
+      "category": "processing",
+      "script": "calculate_gfs_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_gefs",
+      "category": "processing",
+      "script": "calculate_gefs_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_gdps",
+      "category": "processing",
+      "script": "calculate_gdps_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_geps",
+      "category": "processing",
+      "script": "calculate_geps_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_icon",
+      "category": "processing",
+      "script": "calculate_icon_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_ecmwf_ens",
+      "category": "processing",
+      "script": "calculate_ecmwf_ens_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "calculate_aifs_ens",
+      "category": "processing",
+      "script": "calculate_aifs_ens_global.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "build_consensus",
+      "category": "consensus",
+      "script": "build_multimodel_consensus.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "snapshot_run",
+      "category": "archive",
+      "script": "snapshot_run.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--init-date",
+        "{date}",
+        "--cycle",
+        "{cycle}"
+      ]
+    },
+    {
+      "name": "build_run_catalog",
+      "category": "archive",
+      "script": "build_run_catalog.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--archive-root",
+        "archive/runs",
+        "--output-prefix",
+        "archive/run_catalog"
+      ]
+    }
+  ],
+  "execution_mode": "production"
+}

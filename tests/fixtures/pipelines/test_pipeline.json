@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "name": "harmless-executor-test",
+  "execution_mode": "test",
+  "stages": [
+    {
+      "name": "first_success",
+      "category": "test",
+      "script": "tests/fixtures/stages/controlled_stage.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--message",
+        "first_success"
+      ]
+    },
+    {
+      "name": "optional_failure",
+      "category": "test",
+      "script": "tests/fixtures/stages/controlled_stage.py",
+      "enabled": true,
+      "required": false,
+      "arguments": [
+        "--message",
+        "optional_failure",
+        "--exit-code",
+        "5"
+      ]
+    },
+    {
+      "name": "success_after_optional_failure",
+      "category": "test",
+      "script": "tests/fixtures/stages/controlled_stage.py",
+      "enabled": true,
+      "required": true,
+      "arguments": [
+        "--message",
+        "success_after_optional_failure"
+      ]
+    }
+  ]
+}

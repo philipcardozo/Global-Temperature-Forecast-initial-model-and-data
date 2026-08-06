@@ -1,0 +1,1716 @@
+{
+  "created_utc": "2026-08-06T18:17:57.439081+00:00",
+  "records": [
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--manifest",
+        "--output-prefix",
+        "--run-id"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728_00z",
+          "help": null,
+          "line": 92,
+          "names": [
+            "--run-id"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 97,
+          "names": [
+            "--manifest"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 103,
+          "names": [
+            "--output-prefix"
+          ],
+          "required": null
+        }
+      ],
+      "path": "audit_multicycle_readiness.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": true
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "Initialization date in YYYYMMDD format.",
+          "line": 19,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 25,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "build_multimodel_consensus.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--archive-root",
+        "--output-prefix"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 18,
+          "names": [
+            "--archive-root"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 24,
+          "names": [
+            "--output-prefix"
+          ],
+          "required": null
+        }
+      ],
+      "path": "build_run_catalog.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-perturbed",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 297,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 302,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 308,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 50,
+          "help": null,
+          "line": 314,
+          "names": [
+            "--expected-perturbed"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_aifs_ens_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-perturbed",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 297,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 302,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 308,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 50,
+          "help": null,
+          "line": 314,
+          "names": [
+            "--expected-perturbed"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_ecmwf_ens_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "calculate_era5t_global.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 249,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 254,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 260,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_gdps_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-members",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 178,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 183,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 189,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 31,
+          "help": null,
+          "line": 195,
+          "names": [
+            "--expected-members"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_gefs_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-members",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 346,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 352,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 358,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 21,
+          "help": null,
+          "line": 364,
+          "names": [
+            "--expected-members"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_geps_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--max-hour"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 61,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": "00",
+          "help": null,
+          "line": 67,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 240,
+          "help": null,
+          "line": 73,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_gfs_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 309,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 314,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 320,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        }
+      ],
+      "path": "calculate_icon_global.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "compare_all_global_models.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "compare_ensemble_systems.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "compare_global_models.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "compare_three_ensemble_systems.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-perturbed",
+        "--max-hour",
+        "--pause",
+        "--source",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 221,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 227,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 240,
+          "help": null,
+          "line": 233,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 239,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 50,
+          "help": null,
+          "line": 245,
+          "names": [
+            "--expected-perturbed"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "ecmwf",
+            "aws",
+            "azure",
+            "google"
+          ],
+          "default": "ecmwf",
+          "help": null,
+          "line": 251,
+          "names": [
+            "--source"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 0.5,
+          "help": null,
+          "line": 262,
+          "names": [
+            "--pause"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_aifs_ens.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-perturbed",
+        "--max-hour",
+        "--pause",
+        "--source",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 221,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 227,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 240,
+          "help": null,
+          "line": 233,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 239,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 50,
+          "help": null,
+          "line": 245,
+          "names": [
+            "--expected-perturbed"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "ecmwf",
+            "aws",
+            "azure",
+            "google"
+          ],
+          "default": "ecmwf",
+          "help": null,
+          "line": 251,
+          "names": [
+            "--source"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 0.5,
+          "help": null,
+          "line": 262,
+          "names": [
+            "--pause"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_ecmwf_ens.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--date",
+        "--end-date",
+        "--start-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "One date in YYYYMMDD format.",
+          "line": 226,
+          "names": [
+            "--date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 232,
+          "names": [
+            "--start-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 237,
+          "names": [
+            "--end-date"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_era5t.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--max-hour",
+        "--pause",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 266,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 272,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 240,
+          "help": null,
+          "line": 278,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 284,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 0.25,
+          "help": null,
+          "line": 290,
+          "names": [
+            "--pause"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_gdps.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--max-hour",
+        "--members",
+        "--request-interval",
+        "--step",
+        "--workers"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "Initialization date in YYYYMMDD format.",
+          "line": 255,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 262,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": "all",
+          "help": "all or comma-separated members.",
+          "line": 268,
+          "names": [
+            "--members"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 240,
+          "help": null,
+          "line": 275,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 281,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 3,
+          "help": null,
+          "line": 287,
+          "names": [
+            "--workers"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 0.35,
+          "help": "Minimum seconds between request starts.",
+          "line": 293,
+          "names": [
+            "--request-interval"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_gefs.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--expected-members",
+        "--max-hour",
+        "--pause",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 310,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 316,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 240,
+          "help": null,
+          "line": 322,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 328,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 21,
+          "help": null,
+          "line": 334,
+          "names": [
+            "--expected-members"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 0.25,
+          "help": null,
+          "line": 340,
+          "names": [
+            "--pause"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_geps.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--max-hour",
+        "--overwrite"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "Initialization date in YYYYMMDD format.",
+          "line": 59,
+          "names": [
+            "--date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "Initialization cycle. When omitted, search for the latest available cycle.",
+          "line": 68,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "Maximum forecast hour; default: 240.",
+          "line": 78,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": "store_true",
+          "choices": null,
+          "default": null,
+          "help": "Replace existing nonempty files.",
+          "line": 85,
+          "names": [
+            "--overwrite"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_gfs.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": true,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--date",
+        "--max-hour",
+        "--pause",
+        "--step"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": null,
+          "line": 289,
+          "names": [
+            "--date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 295,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 180,
+          "help": null,
+          "line": 301,
+          "names": [
+            "--max-hour"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 6,
+          "help": null,
+          "line": 307,
+          "names": [
+            "--step"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": null,
+          "default": 0.2,
+          "help": null,
+          "line": 313,
+          "names": [
+            "--pause"
+          ],
+          "required": null
+        }
+      ],
+      "path": "download_icon.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": true,
+      "supports_dry_run": false,
+      "supports_max_hour": true,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--force",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": null,
+          "help": "Initialization date in YYYYMMDD format.",
+          "line": 45,
+          "names": [
+            "--init-date"
+          ],
+          "required": true
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 51,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        },
+        {
+          "action": "store_true",
+          "choices": null,
+          "default": null,
+          "help": "Replace an existing snapshot.",
+          "line": 57,
+          "names": [
+            "--force"
+          ],
+          "required": null
+        }
+      ],
+      "path": "snapshot_run.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "verification_status.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728",
+          "help": null,
+          "line": 36,
+          "names": [
+            "--init-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 41,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "verify_aifs_ens.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728",
+          "help": null,
+          "line": 36,
+          "names": [
+            "--init-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 41,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "verify_ecmwf_ens.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728",
+          "help": null,
+          "line": 37,
+          "names": [
+            "--init-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 42,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "verify_forecasts.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": false,
+      "option_names": [],
+      "options": [],
+      "path": "verify_gdps.py",
+      "positional_arguments": [],
+      "supports_cycle": false,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728",
+          "help": null,
+          "line": 36,
+          "names": [
+            "--init-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 41,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "verify_geps.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728",
+          "help": null,
+          "line": 42,
+          "names": [
+            "--init-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "06",
+            "12",
+            "18"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 47,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "verify_icon.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    },
+    {
+      "defines_main": true,
+      "has_main_guard": true,
+      "imports_argparse": true,
+      "option_names": [
+        "--cycle",
+        "--init-date"
+      ],
+      "options": [
+        {
+          "action": null,
+          "choices": null,
+          "default": "20260728",
+          "help": null,
+          "line": 23,
+          "names": [
+            "--init-date"
+          ],
+          "required": null
+        },
+        {
+          "action": null,
+          "choices": [
+            "00",
+            "12"
+          ],
+          "default": "00",
+          "help": null,
+          "line": 28,
+          "names": [
+            "--cycle"
+          ],
+          "required": null
+        }
+      ],
+      "path": "verify_multimodel_consensus.py",
+      "positional_arguments": [],
+      "supports_cycle": true,
+      "supports_date": false,
+      "supports_dry_run": false,
+      "supports_max_hour": false,
+      "supports_overwrite": false,
+      "supports_run_id": false
+    }
+  ],
+  "schema_version": 1,
+  "script_count": 32,
+  "syntax_errors": []
+}
