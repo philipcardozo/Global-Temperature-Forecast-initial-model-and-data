@@ -368,88 +368,41 @@ def build_history(
     return merged
 
 
-def lag_sigma(
+def residual_autocorrelation(
     history: pd.DataFrame,
     *,
     month: int,
     lag: int,
     since: int = 2000,
-) -> float:
-    """Spread of the residual difference between two years of one month.
+) -> tuple[float, int]:
+    """Same-month year-to-year correlation of the transformation residual.
 
-    Comparing a predicted month against a published one is a difference, and
-    the transformation residual is autocorrelated year to year, so most of it
-    cancels. Using the full residual sigma here would overstate the spread.
+    This is the evidence for treating a published year as a plain constant
+    when computing rankings. If it were near 1, knowing last year's residual
+    would tell you most of this year's, and a comparison should be anchored.
+    It is near 0, so it should not.
     """
 
     residuals = history[history["month"] == month].set_index("year")["residual"]
 
-    differences = [
-        float(residuals[year] - residuals[year - lag])
+    pairs = [
+        (float(residuals[year - lag]), float(residuals[year]))
         for year in residuals.index
         if year - lag in residuals.index and year >= since
     ]
 
-    if len(differences) < 10:
-        raise RuntimeError(
-            f"Only {len(differences)} residual pairs for month {month} at lag {lag}."
-        )
+    if len(pairs) < 10:
+        return float("nan"), len(pairs)
 
-    return float(np.std(differences, ddof=1))
+    table = np.asarray(pairs, dtype=float)
 
-
-def anchored_comparison(
-    history: pd.DataFrame,
-    item: MonthEstimate,
-    calibration: dict,
-    *,
-    reference_year: int,
-) -> tuple[float, float, float]:
-    """Compare the target month against a published year, as a difference.
-
-    Returns the anchored point estimate, its sigma, and the probability that
-    the target month exceeds the published reference value.
-    """
-
-    slope = float(calibration["selected"]["coefficients"][1])
-
-    row = history[
-        (history["month"] == item.month) & (history["year"] == reference_year)
-    ]
-
-    if row.empty:
-        raise RuntimeError(f"No published {reference_year}-{item.month:02d} to anchor.")
-
-    reference_noaa = float(row["noaa_anomaly"].iloc[0])
-
-    reference_era5 = float(row["era5_anomaly"].iloc[0])
-
-    difference = slope * (item.era5_anomaly - reference_era5)
-
-    sigma = float(
-        np.sqrt(
-            (slope * item.era5_sigma) ** 2
-            + lag_sigma(
-                history,
-                month=item.month,
-                lag=item.year - reference_year,
-            )
-            ** 2
-        )
-    )
-
-    return (
-        reference_noaa + difference,
-        sigma,
-        1.0 - normal_cdf(-difference / sigma),
-    )
+    return float(np.corrcoef(table[:, 0], table[:, 1])[0, 1]), len(table)
 
 
 def report(
     item: MonthEstimate,
     noaa: pd.DataFrame,
     history: pd.DataFrame,
-    calibration: dict,
 ) -> None:
     """Print one month's distribution."""
 
@@ -501,27 +454,40 @@ def report(
 
     ranks = ranks.sort_values("noaa_anomaly", ascending=False).head(5)
 
-    print("  Ranking, anchored on each published year (differences, not levels):")
+    print()
 
-    print("    year   published    anchored    sigma    P(2026 warmer)")
+    # Published years are known constants, so this is a plain tail probability
+    # of the estimate. An earlier version anchored on each reference year and
+    # carried its residual across, which assumes the transformation residual
+    # persists year to year. It does not: same-month lag-1 to lag-3
+    # autocorrelation since 2000 runs -0.21 to +0.15, and pooling every month
+    # gives +0.14 with a standard error of 0.06.
+    correlations = " ".join(
+        f"lag{lag}="
+        f"{residual_autocorrelation(history, month=item.month, lag=lag)[0]:+.2f}"
+        for lag in (1, 2, 3)
+    )
+
+    print(f"  Residual autocorrelation (why levels, not anchors): {correlations}")
+
+    print()
+
+    print("  Ranking against published years:")
+
+    print("    year   published    P(2026 warmer)")
 
     probabilities: list[float] = []
 
     for _, row in ranks.iterrows():
-        reference_year = int(row["year"])
-
-        point, sigma, probability = anchored_comparison(
-            history,
-            item,
-            calibration,
-            reference_year=reference_year,
+        probability = 1.0 - normal_cdf(
+            (float(row["noaa_anomaly"]) - item.noaa_anomaly) / item.noaa_sigma
         )
 
         probabilities.append(probability)
 
         print(
-            f"    {reference_year}   {row['noaa_anomaly']:+.4f} C   "
-            f"{point:+.4f} C   {sigma:.4f}   {probability:>7.1%}"
+            f"    {int(row['year'])}   {row['noaa_anomaly']:+.4f} C   "
+            f"{probability:>13.1%}"
         )
 
     print()
@@ -634,7 +600,6 @@ def main() -> int:
             ),
             noaa,
             history,
-            calibration,
         )
 
     return 0
