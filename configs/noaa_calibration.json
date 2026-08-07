@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "target": {
+    "product": "NOAAGlobalTemp v6.1",
+    "series": "aravg.mon.land_ocean.90S.90N.v6.1.0.202606.asc",
+    "domain": "global land and ocean, 90S-90N",
+    "quantity": "monthly mean surface temperature anomaly",
+    "units": "degrees Celsius"
+  },
+  "predictor": {
+    "product": "ERA5 daily global-mean 2 m temperature (ECMWF Climate Pulse)",
+    "source": "https://sites.ecmwf.int/data/climatepulse/data/series/era5_daily_series_2t_global.csv",
+    "quantity": "monthly mean of daily anomalies vs 1991-2020",
+    "units": "degrees Celsius"
+  },
+  "overlap_months": 1038,
+  "latest_month": "2026-06",
+  "selected": {
+    "start_year": 2000,
+    "seasonal": true,
+    "terms": [
+      "intercept",
+      "era5_anomaly",
+      "sin_annual",
+      "cos_annual",
+      "sin_semiannual",
+      "cos_semiannual"
+    ],
+    "coefficients": [
+      0.0011120844677890193,
+      0.9075533906680512,
+      0.005497074768307262,
+      -0.0038405461001039245,
+      0.004928395640268788,
+      -0.00021020302713450884
+    ],
+    "out_of_sample_sigma": 0.03541608207676458,
+    "out_of_sample_bias": 0.005959122186631012,
+    "out_of_sample_months": 114,
+    "worst_absolute_error": 0.09474918463475801
+  },
+  "all_fits": [
+    {
+      "start_year": 1940,
+      "seasonal": false,
+      "months": 1038,
+      "coefficients": [
+        -0.005817229783977598,
+        0.8902700543884218
+      ],
+      "in_sample_sigma": 0.06844124667015146,
+      "out_of_sample_sigma": 0.03501340214187681,
+      "out_of_sample_bias": 0.02772758441382907,
+      "worst_absolute_error": 0.10626125271286269
+    },
+    {
+      "start_year": 1940,
+      "seasonal": true,
+      "months": 1038,
+      "coefficients": [
+        -0.005288813183020145,
+        0.8919068241296771,
+        -0.0007608928873678734,
+        0.01751813411871025,
+        -0.0018379192145182859,
+        -0.0019396210406900406
+      ],
+      "in_sample_sigma": 0.06741420072790039,
+      "out_of_sample_sigma": 0.03714048779989678,
+      "out_of_sample_bias": 0.026083245213245895,
+      "worst_absolute_error": 0.10357215161019706
+    },
+    {
+      "start_year": 1979,
+      "seasonal": false,
+      "months": 570,
+      "coefficients": [
+        -0.005818779875514221,
+        0.9175434804582823
+      ],
+      "in_sample_sigma": 0.04245343856619419,
+      "out_of_sample_sigma": 0.03617067906947676,
+      "out_of_sample_bias": 0.009993174981789584,
+      "worst_absolute_error": 0.10320352814155986
+    },
+    {
+      "start_year": 1979,
+      "seasonal": true,
+      "months": 570,
+      "coefficients": [
+        -0.005789580320540889,
+        0.9180255226241452,
+        0.0005606203866597348,
+        0.01050383431091345,
+        0.002026744203789498,
+        0.0005191206586337553
+      ],
+      "in_sample_sigma": 0.04191445986481776,
+      "out_of_sample_sigma": 0.036929473481575624,
+      "out_of_sample_bias": 0.009553639534829725,
+      "worst_absolute_error": 0.10795625497155836
+    },
+    {
+      "start_year": 2000,
+      "seasonal": false,
+      "months": 318,
+      "coefficients": [
+        0.001482815433388236,
+        0.9059670170643872
+      ],
+      "in_sample_sigma": 0.035610966807641795,
+      "out_of_sample_sigma": 0.03562693009917562,
+      "out_of_sample_bias": 0.006555166451084979,
+      "worst_absolute_error": 0.10286822204875468
+    },
+    {
+      "start_year": 2000,
+      "seasonal": true,
+      "months": 318,
+      "coefficients": [
+        0.0011120844677890193,
+        0.9075533906680512,
+        0.005497074768307262,
+        -0.0038405461001039245,
+        0.004928395640268788,
+        -0.00021020302713450884
+      ],
+      "in_sample_sigma": 0.035348944587985334,
+      "out_of_sample_sigma": 0.03541608207676458,
+      "out_of_sample_bias": 0.005959122186631012,
+      "worst_absolute_error": 0.09474918463475801
+    },
+    {
+      "start_year": 2015,
+      "seasonal": false,
+      "months": 138,
+      "coefficients": [
+        0.03184043878120497,
+        0.8530867866873908
+      ],
+      "in_sample_sigma": 0.0354785521279044,
+      "out_of_sample_sigma": 0.03384031561969595,
+      "out_of_sample_bias": -0.0010873998481893557,
+      "worst_absolute_error": 0.09740173474353298
+    },
+    {
+      "start_year": 2015,
+      "seasonal": true,
+      "months": 138,
+      "coefficients": [
+        0.031037341264968966,
+        0.8539763839421443,
+        0.016577169929693134,
+        0.003218485932690322,
+        0.0074923085553401615,
+        -0.0029871777291989965
+      ],
+      "in_sample_sigma": 0.03334642449951201,
+      "out_of_sample_sigma": 0.03281455465487912,
+      "out_of_sample_bias": -0.0014043498828480295,
+      "worst_absolute_error": 0.09257189191104699
+    }
+  ],
+  "caveats": [
+    "Fitted against currently published NOAA values, not first releases. Real first-publication error is this sigma plus the revision spread.",
+    "The ERA5 predictor is the ECMWF Climate Pulse global mean, which is not identical to this system's own ERA5T extraction. Measure that offset against overlapping days before using the mapping in production."
+  ]
+}
